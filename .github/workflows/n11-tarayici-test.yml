@@ -1,0 +1,49 @@
+name: N11 Güncel Fiyat Okuma Testi
+on:
+  push:
+    paths: ['.github/workflows/n11-tarayici-test.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  read-prices:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Standart tarayıcıyı kur
+        run: |
+          python -m pip install playwright==1.56.0
+          python -m playwright install --with-deps chromium
+      - name: Dört mağazanın güncel fiyatlarını oku
+        run: |
+          python - <<'PY'
+          import asyncio, re
+          from playwright.async_api import async_playwright
+          async def main():
+              failures=0
+              async with async_playwright() as p:
+                  browser=await p.chromium.launch()
+                  page=await browser.new_page(locale='tr-TR')
+                  for store in ['sasmazerltd','avrupabeyazesya','erhangulener','haneciogluticaret']:
+                      try:
+                          res=await page.goto('https://www.n11.com/magaza/'+store,wait_until='domcontentloaded',timeout=40000)
+                          print(store,'HTTP',res.status if res else 0)
+                          if not res or res.status != 200:
+                              failures+=1
+                              continue
+                          await page.locator('a[href*="/urun/"] h3').first.wait_for(timeout=20000)
+                          cards=await page.locator('a[href*="/urun/"]').evaluate_all("es=>es.filter(e=>e.querySelector('h2')&&e.querySelector('h3')).map(e=>({url:e.href,title:e.querySelector('h2').textContent,price:e.querySelector('h3').textContent}))")
+                          if not cards or any('magaza='+store not in x['url'] for x in cards):
+                              failures+=1
+                              print(store,'Magaza/fiyat dogrulamasi basarisiz')
+                              continue
+                          print(store,'Okunan kart:',len(cards))
+                          for c in cards[:3]: print(c['title'][:100],'|',c['price'])
+                      except Exception as exc:
+                          failures+=1
+                          print(store,'Hata tipi:',type(exc).__name__)
+                  await browser.close()
+              if failures: raise SystemExit('SONUC: Otomatik fiyat okuma dogrulanamadi. Bildirim gonderilmedi.')
+              print('SONUC: Dort magazanin ilk urun kartlari okundu; tam liste testi gerekli.')
+          asyncio.run(main())
+          PY
