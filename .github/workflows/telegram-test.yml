@@ -1,21 +1,40 @@
-name: Telegram Test
-
+name: Telegram Fiyat Karşılaştırma
 on:
+  push:
+    paths: ['.github/workflows/telegram-test.yml']
   workflow_dispatch:
-
+permissions:
+  contents: read
 jobs:
   send-test:
     runs-on: ubuntu-latest
+    timeout-minutes: 3
     steps:
-      - name: Telegram test bildirimi
+      - name: Doğrulanmış rakip fiyat özetini gönder
         env:
           BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           python - <<'PY'
-          import os, urllib.parse, urllib.request
+          import os, json, urllib.parse, urllib.request, urllib.error
+          from datetime import datetime, timezone
+          if datetime.now(timezone.utc) > datetime(2026,10,13,15,45,tzinfo=timezone.utc):
+              raise SystemExit('Fiyat ozeti eskidi; tekrar gonderilmeyecek.')
           token = os.environ['BOT_TOKEN']
           chat_id = os.environ['CHAT_ID']
-          data = urllib.parse.urlencode({'chat_id': chat_id, 'text': '✅ Şaşmazer N11 fiyat takip sistemi Telegram bağlantı testi başarılı!'}).encode()
-          urllib.request.urlopen(urllib.request.Request(f'https://api.telegram.org/bot{token}/sendMessage', data=data), timeout=20).read()
+          messages = json.loads(r'''["🔻 Şaşmazer N11 fiyat karşılaştırması\n13 Ekim 2026 — bu oturumda okunan fiyatlar\nRakip: avrupabeyazesya\nSepet indirimi görünen ürünlerde sepet fiyatı kullanıldı.\n\nArçelik A 710 I Prestige Serisi 4 Programlı 14 Kişilik Solo Bulaşık Makinesi\nSen: 26.995,50 TL | Rakip: 24.240 TL\nFark: 2.755,50 TL\nhttps://www.n11.com/urun/arcelik-a-710-i-prestige-serisi-4-programli-14-kisilik-solo-bulasik-makinesi-122330014?magaza=avrupabeyazesya\n\nArçelik 570508 EI Çift Kapılı No Frost Buzdolabı Gri\nSen: 44.095,50 TL | Rakip: 43.880 TL\nFark: 215,50 TL\nhttps://www.n11.com/urun/arcelik-570508-ei-cift-kapili-no-frost-buzdolabi-gri-137913583?magaza=avrupabeyazesya\n\nBu bir anlık karşılaştırmadır; geçmiş fiyat düşüşü doğrulanmadı. Okunan ürünlerde yalnızca senin altında olanlar listelendi.","🔻 Şaşmazer N11 fiyat karşılaştırması\n13 Ekim 2026 — bu oturumda okunan fiyatlar\nRakip: erhangulener\nSepet indirimi görünen ürünlerde sepet fiyatı kullanıldı.\n\nArçelik A 710 I Prestige Serisi 4 Programlı 14 Kişilik Solo Bulaşık Makinesi\nSen: 26.995,50 TL | Rakip: 24.671,70 TL\nFark: 2.323,80 TL\nhttps://www.n11.com/urun/arcelik-a-710-i-prestige-serisi-4-programli-14-kisilik-solo-bulasik-makinesi-122330014?magaza=erhangulener\n\nArçelik 902 KMX 9 KG Kurutma Makinesi\nSen: 29.695,50 TL | Rakip: 28.861,20 TL\nFark: 834,30 TL\nhttps://www.n11.com/urun/arcelik-902-kmx-9-kg-kurutma-makinesi-125776510?magaza=erhangulener\n\nArçelik A 710 B Prestige Serisi 4 Programlı 14 Kişilik Solo Bulaşık Makinesi\nSen: 23.048 TL | Rakip: 22.827,60 TL\nFark: 220,40 TL\nhttps://www.n11.com/urun/arcelik-a-710-b-prestige-serisi-4-programli-14-kisilik-solo-bulasik-makinesi-122330277?magaza=erhangulener\n\nArçelik 278550 EI MaxiFit No-Frost Kombi Tipi Buzdolabı\nSen: 54.445,50 TL | Rakip: 53.617,50 TL\nFark: 828,00 TL\nhttps://www.n11.com/urun/arcelik-278550-ei-maxifit-no-frost-kombi-tipi-buzdolabi-84396164?magaza=erhangulener\n\nArçelik BEU 9030 D Aria Expert 3000 W Buharlı Ütü\nSen: 5.999 TL | Rakip: 5.546 TL\nFark: 453,00 TL\nhttps://www.n11.com/urun/arcelik-beu-9030-d-aria-expert-3000-w-buharli-utu-1774636?magaza=erhangulener\n\nArçelik 11140 MX 11 Kg Çamaşır Makinesi\nSen: 31.495,50 TL | Rakip: 30.723,30 TL\nFark: 772,20 TL\nhttps://www.n11.com/urun/arcelik-11140-mx-11-kg-camasir-makinesi-76417732?magaza=erhangulener\n\nArçelik 283655 EI AI Fit Kombi 655 L No Frost Buzdolabı\nSen: 62.400 TL | Rakip: 61.569 TL\nFark: 831,00 TL\nhttps://www.n11.com/urun/arcelik-283655-ei-ai-fit-kombi-655-l-no-frost-buzdolabi-134540814?magaza=erhangulener\n\nArçelik A 710 GC 6 Programlı 14 Kişilik Bulaşık Makinesi\nSen: 28.435,50 TL | Rakip: 26.608,97 TL\nFark: 1.826,53 TL\nhttps://www.n11.com/urun/arcelik-a-710-gc-6-programli-14-kisilik-bulasik-makinesi-121973665?magaza=erhangulener\n\nBu bir anlık karşılaştırmadır; geçmiş fiyat düşüşü doğrulanmadı. Okunan ürünlerde yalnızca senin altında olanlar listelendi.","🔻 Şaşmazer N11 fiyat karşılaştırması\n13 Ekim 2026 — bu oturumda okunan fiyatlar\nRakip: haneciogluticaret\nSepet indirimi görünen ürünlerde sepet fiyatı kullanıldı.\n\nArçelik A 710 I Prestige Serisi 4 Programlı 14 Kişilik Solo Bulaşık Makinesi\nSen: 26.995,50 TL | Rakip: 24.699 TL\nFark: 2.296,50 TL\nhttps://www.n11.com/urun/arcelik-a-710-i-prestige-serisi-4-programli-14-kisilik-solo-bulasik-makinesi-122330014?magaza=haneciogluticaret\n\nArçelik 270477 EI AI 475 L Yapay Zeka Teknolojili Alttan Donduruculu Çift Kapılı Buzdolabı\nSen: 44.199 TL | Rakip: 43.244,10 TL\nFark: 954,90 TL\nhttps://www.n11.com/urun/arcelik-270477-ei-ai-475-l-yapay-zeka-teknolojili-alttan-donduruculu-cift-kapili-buzdolabi-119184364?magaza=haneciogluticaret\n\nArçelik 2072 MI 244 L 7 Bölmeli Statik Dikey Derin Dondurucu\nSen: 32.395,50 TL | Rakip: 26.099,10 TL\nFark: 6.296,40 TL\nhttps://www.n11.com/urun/arcelik-2072-mi-244-l-7-bolmeli-statik-dikey-derin-dondurucu-96222402?magaza=haneciogluticaret\n\nArçelik 274533 MB 532 LT No-Frost Kombi Tipi Buzdolabı\nSen: 45.799 TL | Rakip: 43.299 TL\nFark: 2.500,00 TL\nhttps://www.n11.com/urun/arcelik-274533-mb-532-lt-no-frost-kombi-tipi-buzdolabi-60851107?magaza=haneciogluticaret\n\nBu bir anlık karşılaştırmadır; geçmiş fiyat düşüşü doğrulanmadı. Okunan ürünlerde yalnızca senin altında olanlar listelendi."]''')
+          for index, message in enumerate(messages, 1):
+              if len(message)>4096:
+                  raise SystemExit('Mesaj uzunlugu gecersiz.')
+              data = urllib.parse.urlencode({'chat_id':chat_id,'text':message,'disable_web_page_preview':'true'}).encode()
+              try:
+                  with urllib.request.urlopen(urllib.request.Request('https://api.telegram.org/bot'+token+'/sendMessage',data=data),timeout=25) as res:
+                      result = json.loads(res.read())
+                  if result.get('ok') is not True:
+                      raise SystemExit('Telegram gonderimi basarisiz; gizli yanit yazdirilmadi.')
+                  print('Telegram fiyat ozeti kabul edildi:',index,'Mesaj ID:',result.get('result',{}).get('message_id'))
+              except urllib.error.HTTPError as exc:
+                  raise SystemExit('Telegram HTTP hatasi: '+str(exc.code)) from None
+              except Exception as exc:
+                  raise SystemExit('Gonderim hata tipi: '+type(exc).__name__) from None
           PY
