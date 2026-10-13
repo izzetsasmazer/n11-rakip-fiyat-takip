@@ -1,0 +1,21 @@
+name: Telegram Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  send-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Telegram test bildirimi
+        env:
+          BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python - <<'PY'
+          import os, urllib.parse, urllib.request
+          token = os.environ['BOT_TOKEN']
+          chat_id = os.environ['CHAT_ID']
+          data = urllib.parse.urlencode({'chat_id': chat_id, 'text': '✅ Şaşmazer N11 fiyat takip sistemi Telegram bağlantı testi başarılı!'}).encode()
+          urllib.request.urlopen(urllib.request.Request(f'https://api.telegram.org/bot{token}/sendMessage', data=data), timeout=20).read()
+          PY
