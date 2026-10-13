@@ -1,0 +1,68 @@
+name: N11 Fiyat Okuma Testi
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  kontrol:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Python kutuphanelerini kur
+        run: python -m pip install --quiet requests beautifulsoup4
+      - name: Dort magazayi oku
+        shell: bash
+        run: |
+          python - <<'PY'
+          import re
+          import sys
+          import requests
+          from bs4 import BeautifulSoup
+
+          stores = ["sasmazerltd", "avrupabeyazesya", "erhangulener", "haneciogluticaret"]
+          headers = {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+              "Accept-Language": "tr-TR,tr;q=0.9",
+          }
+          has_failure = False
+          price_re = re.compile(r"(?:\d{1,3}(?:\.\d{3})+|\d+)(?:,\d{1,2})?\s*TL", re.I)
+          for store in stores:
+              print(f"\n===== {store} =====", flush=True)
+              try:
+                  response = requests.get(f"https://www.n11.com/magaza/{store}", headers=headers, timeout=25)
+                  print("HTTP durum:", response.status_code, "HTML boyutu:", len(response.content))
+                  response.raise_for_status()
+                  soup = BeautifulSoup(response.text, "html.parser")
+                  print("Sayfa basligi:", soup.title.get_text(" ", strip=True)[:140] if soup.title else "YOK")
+                  links = {}
+                  for a in soup.select('a[href*="/urun/"]'):
+                      href = a.get("href", "")
+                      if href.startswith("/"):
+                          href = "https://www.n11.com" + href
+                      if not href.startswith("http"):
+                          continue
+                      name = a.get_text(" ", strip=True)
+                      if not name:
+                          img = a.select_one("img[alt]")
+                          name = img.get("alt", "") if img else ""
+                      if href not in links:
+                          links[href] = name[:90]
+                  print("Urun linki sayisi:", len(links))
+                  prices = price_re.findall(soup.get_text(" ", strip=True))
+                  print("Sayfada gorunen fiyat metni sayisi:", len(prices))
+                  print("Ornek fiyat metinleri:", prices[:12])
+                  for href, name in list(links.items())[:5]:
+                      print("Ornek urun:", name, href[:140])
+                  if not links or not prices:
+                      print("UYARI: Urun veya fiyat okumasi eksik. Bu sonuc bildirim icin kullanilamaz.")
+                      has_failure = True
+              except Exception as exc:
+                  print("HATA:", type(exc).__name__, str(exc)[:200])
+                  has_failure = True
+          print("\nSONUC:", "EK INCELEME GEREKLI" if has_failure else "SAYFA VERILERI GORULUYOR; URUN BAZLI DOGRULAMA GEREKLI")
+          if has_failure:
+              sys.exit(1)
+          PY
