@@ -1,0 +1,58 @@
+name: N11 API Güvenli Tanı
+on:
+  push:
+    paths: ['.github/workflows/n11-api-tani.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Mevcut Secrets ile salt okunur bağlantı testi
+        env:
+          N11_API_KEY: ${{ secrets.N11_API_KEY }}
+          N11_API_PASSWORD: ${{ secrets.N11_API_PASSWORD }}
+        run: |
+          python - <<'PY'
+          import os, json, urllib.request, urllib.error
+          key = os.environ.get('N11_API_KEY', '').strip()
+          secret = os.environ.get('N11_API_PASSWORD', '').strip()
+          if not key or not secret:
+              raise SystemExit('SONUC: Secrets eksik.')
+          class NoRedirect(urllib.request.HTTPRedirectHandler):
+              def redirect_request(self, *args, **kwargs): return None
+          opener = urllib.request.build_opener(NoRedirect)
+          for label, headers, suffix in [
+              ('Resmi baslik', {'appKey':key,'appSecret':secret}, ''),
+              ('Kucuk harf baslik', {'appkey':key,'appsecret':secret}, ''),
+              ('Acik sayfalama', {'appKey':key,'appSecret':secret}, '?page=0&size=20'),
+          ]:
+              req = urllib.request.Request('https://api.n11.com/ms/product-query'+suffix,
+                  headers=dict(headers, Accept='application/json'), method='GET')
+              try:
+                  with opener.open(req, timeout=30) as res:
+                      print(label, 'HTTP', res.status)
+                      data = json.loads(res.read(2000000))
+              except urllib.error.HTTPError as exc:
+                  print(label, 'HTTP', exc.code)
+                  continue
+              except Exception as exc:
+                  print(label, 'Hata tipi:', type(exc).__name__)
+                  continue
+              items = data.get('content') if isinstance(data, dict) else None
+              if not isinstance(items, list) or not items:
+                  raise SystemExit('SONUC: Urun listesi dogrulanamadi.')
+              if any(str(x.get('sellerNickname','')).casefold() != 'sasmazerltd' for x in items):
+                  raise SystemExit('SONUC: Beklenen magaza kimligi eslesmedi.')
+              if not all(isinstance(x.get('salePrice'),(int,float)) and x['salePrice']>0 for x in items):
+                  raise SystemExit('SONUC: Satis fiyatlari eksik veya gecersiz.')
+              print('Magaza kimligi eslesti. Urun sayisi:',len(items))
+              for item in items[:10]:
+                  title = str(item.get('title',''))[:100]
+                  for sensitive in (key,secret): title = title.replace(sensitive,'[GIZLI]')
+                  print('URUN:',title,'| API satis fiyati:',item['salePrice'])
+              raise SystemExit(0)
+          raise SystemExit('SONUC: Mevcut Secrets ile erisim dogrulanamadi. Bildirim gonderilmedi.')
+          PY
