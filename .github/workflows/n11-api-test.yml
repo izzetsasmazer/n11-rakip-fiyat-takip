@@ -1,0 +1,73 @@
+name: N11 API Test
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  api-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: N11 kendi magazamizin urunlerini sorgula
+        env:
+          N11_API_KEY: ${{ secrets.N11_API_KEY }}
+          N11_API_PASSWORD: ${{ secrets.N11_API_PASSWORD }}
+        run: |
+          python - <<'PY'
+          import os, json, urllib.request, urllib.error
+          key = os.environ.get('N11_API_KEY', '').strip()
+          password = os.environ.get('N11_API_PASSWORD', '').strip()
+          if not key or not password:
+              raise SystemExit('HATA: N11 API Secrets eksik. Anahtar ve sifreyi kontrol edin.')
+          url = 'https://api.n11.com/ms/product-query?page=0&size=20'
+          req = urllib.request.Request(url, headers={
+              'appKey': key, 'appSecret': password,
+              'Accept': 'application/json', 'User-Agent': 'N11SellerPriceCheck/1.0',
+          }, method='GET')
+          try:
+              with urllib.request.urlopen(req, timeout=30) as res:
+                  status = res.status
+                  raw = res.read(250000)
+          except urllib.error.HTTPError as exc:
+              # Yanit govdesini dokme; sunucu yanitinda hassas bilgiler olabilir.
+              print('N11 API HTTP hatasi:', exc.code)
+              if exc.code in (401, 403):
+                  print('API erisimi reddedildi; N11 API anahtari/sifresi veya izinler kontrol edilmeli.')
+              raise SystemExit(1)
+          except Exception as exc:
+              print('Baglanti hatasi:', type(exc).__name__)
+              raise SystemExit(1)
+          print('HTTP durum:', status)
+          try:
+              data = json.loads(raw)
+          except ValueError:
+              print('HATA: JSON yanit alinmadi; govde guvenlik amaciyla gosterilmiyor.')
+              raise SystemExit(1)
+          if not isinstance(data, dict):
+              print('HATA: Beklenmeyen API yanit tipi.')
+              raise SystemExit(1)
+          print('Yanit alanlari:', ', '.join(list(data)[:20]))
+          if data.get('error') or data.get('errors'):
+              print('API uygulama hatasi verdi; ayrintilar guvenlik icin yazdirilmiyor.')
+              raise SystemExit(1)
+          content = data.get('content')
+          if not isinstance(content, list):
+              print('HATA: Urun listesi content alaninda bulunamadi. API yanit yapisi incelenmeli.')
+              raise SystemExit(1)
+          print('Bu sayfada urun sayisi:', len(content))
+          print('Toplam sayfa:', data.get('totalPages', 'belirtilmedi'))
+          for index, item in enumerate(content[:10], start=1):
+              if not isinstance(item, dict):
+                  continue
+              title = str(item.get('title') or item.get('productTitle') or item.get('name') or '')[:100]
+              code = str(item.get('stockCode') or item.get('sellerCode') or '')[:60]
+              print(f'Urun {index}: {title} | Stok/model kodu: {code}')
+              print('  Fiyat alanlari:', ', '.join(k for k in item if 'price' in k.lower()) or '(bulunamadi)')
+          if not content:
+              print('UYARI: Urun listesi bos geldi; erisim calisiyor olsa bile urun verisi dogrulanamadi.')
+          else:
+              print('SONUC: N11 API urun listesi okundu. Guncel satis/sepet fiyati ayrica dogrulanmalidir.')
+          PY
