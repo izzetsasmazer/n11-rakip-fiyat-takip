@@ -1,37 +1,26 @@
 {
   "schema_version": 1,
   "last_report": {
-    "verified_from": "2026-10-14T15:33:30Z",
-    "verified_to": "2026-10-14T15:38:26Z",
-    "commit_sha": "515b4b39e962714e96058c48806a1c4e4a31db2e",
-    "workflow_run_id": 38591227496,
+    "verified_from": "2026-10-14T17:20:16Z",
+    "verified_to": "2026-10-14T18:33:45Z",
+    "commit_sha": "eff0a4ea1dbe359ce8195745e0412d78c2542fd4",
+    "workflow_run_id": 38616413560,
     "delivery": "telegram_send_step_success",
     "diagnostic_completed": true,
-    "scan": "partial",
-    "stores": [
-      {
-        "seller": "sasmazerltd",
-        "total": 41,
-        "links_found": 41,
-        "prices_read": 37
-      },
-      {
-        "seller": "avrupabeyazesya",
-        "total": 12,
-        "prices_read": 12
-      },
-      {
-        "seller": "erhangulener",
-        "total": 249,
-        "prices_read": 20
-      },
-      {
-        "seller": "haneciogluticaret",
-        "total": 53,
-        "prices_read": 20
-      }
+    "scan": "complete_current_own_inventory",
+    "own_total": 40,
+    "own_links_found": 40,
+    "own_prices_read": 40,
+    "all_seller_panels_completed": 40,
+    "target_seller_catalog_checks": 120,
+    "target_offers_seen": 44,
+    "new_offers_delivered": 4,
+    "reference_total": 41,
+    "reference_found": 40,
+    "reference_not_in_current_store": [
+      "10122"
     ],
-    "matched_offers": 25
+    "note": "Current own-store inventory and all visible sellers panels checked. Rival unrelated inventory not scanned. Notification offers reverified on own and seller-specific product pages before sending."
   },
   "last_delivered_offers": [
     {
@@ -89,6 +78,144 @@
       "own_price_kurus": 4239500,
       "rival_price_kurus": 4234900,
       "url": "https://www.n11.com/urun/arcelik-270477-eb-ai-475-l-yapay-zeka-teknolojili-alttan-donduruculu-cift-kapili-buzdolabi-119185711?magaza=haneciogluticaret"
+    },
+    {
+      "catalog_id": "76417732",
+      "model": "11140 MX",
+      "seller": "erhangulener",
+      "own_price_kurus": 3219540,
+      "rival_price_kurus": 3140604,
+      "url": "https://www.n11.com/urun/arcelik-11140-mx-11-kg-camasir-makinesi-76417732?magaza=erhangulener"
+    },
+    {
+      "catalog_id": "121973665",
+      "model": "A 710 GC",
+      "seller": "erhangulener",
+      "own_price_kurus": 2906740,
+      "rival_price_kurus": 2720028,
+      "url": "https://www.n11.com/urun/arcelik-a-710-gc-6-programli-14-kisilik-bulasik-makinesi-121973665?magaza=erhangulener"
+    },
+    {
+      "catalog_id": "96222402",
+      "model": "2072 MI",
+      "seller": "haneciogluticaret",
+      "own_price_kurus": 3311540,
+      "rival_price_kurus": 2667908,
+      "url": "https://www.n11.com/urun/arcelik-2072-mi-244-l-7-bolmeli-statik-dikey-derin-dondurucu-96222402?magaza=haneciogluticaret"
+    },
+    {
+      "catalog_id": "60851107",
+      "model": "274533 MB",
+      "seller": "haneciogluticaret",
+      "own_price_kurus": 4579900,
+      "rival_price_kurus": 4329900,
+      "url": "https://www.n11.com/urun/arcelik-274533-mb-532-lt-no-frost-kombi-tipi-buzdolabi-60851107?magaza=haneciogluticaret"
     }
-  ]
+  ],
+  "last_check": {
+    "verified_from": "2026-10-14T17:20:16Z",
+    "verified_to": "2026-10-14T18:33:45Z",
+    "commit_sha": "eff0a4ea1dbe359ce8195745e0412d78c2542fd4",
+    "workflow_run_id": 38616413560,
+    "delivery": "telegram_send_step_success",
+    "diagnostic_completed": true,
+    "scan": "complete_current_own_inventory",
+    "own_total": 40,
+    "own_links_found": 40,
+    "own_prices_read": 40,
+    "all_seller_panels_completed": 40,
+    "target_seller_catalog_checks": 120,
+    "target_offers_seen": 44,
+    "new_offers_delivered": 4,
+    "reference_total": 41,
+    "reference_found": 40,
+    "reference_not_in_current_store": [
+      "10122"
+    ],
+    "note": "Current own-store inventory and all visible sellers panels checked. Rival unrelated inventory not scanned. Notification offers reverified on own and seller-specific product pages before sending.",
+    "found_catalog_ids": [
+      "59831910",
+      "122330014",
+      "125776510",
+      "126000051",
+      "122330277",
+      "53229173",
+      "128799406",
+      "122021236",
+      "75294073",
+      "84396164",
+      "119186548",
+      "133470448",
+      "84566973",
+      "119184364",
+      "119185711",
+      "1774636",
+      "130629685",
+      "76417732",
+      "26716681",
+      "129273228",
+      "57187573",
+      "121973553",
+      "120214369",
+      "131264934",
+      "96222402",
+      "131735088",
+      "120389669",
+      "124593855",
+      "42888640",
+      "59013959",
+      "134540814",
+      "121973665",
+      "60851107",
+      "137913583",
+      "137300051",
+      "122232596",
+      "59214068",
+      "1378916",
+      "55697247",
+      "93286085"
+    ],
+    "screenshot_price_read_ids": [
+      "59831910",
+      "122330014",
+      "125776510",
+      "126000051",
+      "122330277",
+      "53229173",
+      "128799406",
+      "122021236",
+      "75294073",
+      "84396164",
+      "119186548",
+      "133470448",
+      "84566973",
+      "119184364",
+      "119185711",
+      "1774636",
+      "130629685",
+      "76417732",
+      "26716681",
+      "129273228",
+      "57187573",
+      "121973553",
+      "120214369",
+      "131264934",
+      "96222402",
+      "131735088",
+      "120389669",
+      "124593855",
+      "42888640",
+      "59013959",
+      "134540814",
+      "121973665",
+      "60851107",
+      "137913583",
+      "137300051",
+      "122232596",
+      "59214068",
+      "1378916",
+      "55697247",
+      "93286085"
+    ]
+  }
 }
