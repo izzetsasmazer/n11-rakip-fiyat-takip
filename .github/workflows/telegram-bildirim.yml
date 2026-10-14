@@ -1,0 +1,65 @@
+name: Telegram bildirim
+on:
+  push:
+    branches: [main]
+    paths:
+      - telegram-outbox.json
+      - .github/workflows/telegram-bildirim.yml
+permissions:
+  contents: read
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - name: Telegram'a gonder
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          RUN_ATTEMPT: ${{ github.run_attempt }}
+        run: |
+          python - <<'PY'
+          import json, os, sys, pathlib, datetime, urllib.request, urllib.error
+          if os.environ.get("RUN_ATTEMPT") != "1":
+              sys.exit("Tekrar gonderimi onlemek icin yeniden calistirma atlandi.")
+          token = os.environ.get("TELEGRAM_BOT_TOKEN")
+          chat = os.environ.get("TELEGRAM_CHAT_ID")
+          if not token or not chat:
+              sys.exit("Telegram Secrets kayitlari eksik.")
+          p = pathlib.Path("telegram-outbox.json")
+          if not p.exists():
+              messages = ["N11 Telegram bağlantı testi. Bu yalnızca bildirim kanalı testidir; güncel fiyat taraması yapıldığı anlamına gelmez."]
+          else:
+              try:
+                  payload = json.loads(p.read_text(encoding="utf-8"))
+                  messages = payload["messages"]
+                  if not isinstance(messages, list) or len(messages) > 10:
+                      raise ValueError()
+                  if not messages:
+                      sys.exit(0)
+                  timestamp = datetime.datetime.fromisoformat(payload["verified_at"].replace("Z", "+00:00"))
+                  age = (datetime.datetime.now(datetime.timezone.utc) - timestamp).total_seconds()
+                  if not 0 <= age <= 600:
+                      sys.exit("Eski veya gelecekteki bildirim gonderilmedi.")
+              except (ValueError, KeyError, TypeError):
+                  sys.exit("Bildirim verisi gecersiz.")
+          if any(not isinstance(m, str) or not m.strip() or len(m) > 4000 for m in messages):
+              sys.exit("Mesaj bicimi gecersiz.")
+          for m in messages:
+              body = json.dumps({"chat_id": chat, "text": m, "disable_web_page_preview": True}).encode()
+              req = urllib.request.Request("https://api.telegram.org/bot" + token + "/sendMessage", data=body, headers={"Content-Type": "application/json"})
+              try:
+                  with urllib.request.urlopen(req, timeout=20) as r:
+                      result = json.load(r)
+              except urllib.error.HTTPError as e:
+                  sys.exit("Telegram HTTP hata kodu: " + str(e.code))
+              except Exception:
+                  sys.exit("Telegram baglanti hatasi; otomatik tekrar yapilmadi.")
+              if not result.get("ok"):
+                  sys.exit("Telegram mesaji kabul etmedi.")
+              print("Telegram mesaji kabul edildi. Mesaj ID:", result["result"]["message_id"])
+          PY
