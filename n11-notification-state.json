@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "last_report": {
+    "verified_from": "2026-10-14T15:33:30Z",
+    "verified_to": "2026-10-14T15:38:26Z",
+    "commit_sha": "515b4b39e962714e96058c48806a1c4e4a31db2e",
+    "workflow_run_id": 38591227496,
+    "delivery": "telegram_send_step_success",
+    "diagnostic_completed": true,
+    "scan": "partial",
+    "stores": [
+      {
+        "seller": "sasmazerltd",
+        "total": 41,
+        "links_found": 41,
+        "prices_read": 37
+      },
+      {
+        "seller": "avrupabeyazesya",
+        "total": 12,
+        "prices_read": 12
+      },
+      {
+        "seller": "erhangulener",
+        "total": 249,
+        "prices_read": 20
+      },
+      {
+        "seller": "haneciogluticaret",
+        "total": 53,
+        "prices_read": 20
+      }
+    ],
+    "matched_offers": 25
+  },
+  "last_delivered_offers": [
+    {
+      "catalog_id": "122330014",
+      "model": "A 710 I",
+      "seller": "erhangulener",
+      "own_price_kurus": 2759540,
+      "rival_price_kurus": 2521996,
+      "url": "https://www.n11.com/urun/arcelik-a-710-i-prestige-serisi-4-programli-14-kisilik-solo-bulasik-makinesi-122330014?magaza=erhangulener"
+    },
+    {
+      "catalog_id": "125776510",
+      "model": "902 KMX",
+      "seller": "erhangulener",
+      "own_price_kurus": 3035540,
+      "rival_price_kurus": 2950256,
+      "url": "https://www.n11.com/urun/arcelik-902-kmx-9-kg-kurutma-makinesi-125776510?magaza=erhangulener"
+    },
+    {
+      "catalog_id": "84396164",
+      "model": "278550 EI",
+      "seller": "erhangulener",
+      "own_price_kurus": 5565540,
+      "rival_price_kurus": 5480900,
+      "url": "https://www.n11.com/urun/arcelik-278550-ei-maxifit-no-frost-kombi-tipi-buzdolabi-84396164?magaza=erhangulener"
+    },
+    {
+      "catalog_id": "122330014",
+      "model": "A 710 I",
+      "seller": "haneciogluticaret",
+      "own_price_kurus": 2759540,
+      "rival_price_kurus": 2469900,
+      "url": "https://www.n11.com/urun/arcelik-a-710-i-prestige-serisi-4-programli-14-kisilik-solo-bulasik-makinesi-122330014?magaza=haneciogluticaret"
+    },
+    {
+      "catalog_id": "122330277",
+      "model": "A 710 B",
+      "seller": "haneciogluticaret",
+      "own_price_kurus": 2304800,
+      "rival_price_kurus": 2303900,
+      "url": "https://www.n11.com/urun/arcelik-a-710-b-prestige-serisi-4-programli-14-kisilik-solo-bulasik-makinesi-122330277?magaza=haneciogluticaret"
+    },
+    {
+      "catalog_id": "122021236",
+      "model": "570471 MB",
+      "seller": "haneciogluticaret",
+      "own_price_kurus": 3109140,
+      "rival_price_kurus": 3035908,
+      "url": "https://www.n11.com/urun/arcelik-570471-mb-471-l-cift-kapili-no-frost-buzdolabi-122021236?magaza=haneciogluticaret"
+    },
+    {
+      "catalog_id": "119185711",
+      "model": "270477 EB AI",
+      "seller": "haneciogluticaret",
+      "own_price_kurus": 4239500,
+      "rival_price_kurus": 4234900,
+      "url": "https://www.n11.com/urun/arcelik-270477-eb-ai-475-l-yapay-zeka-teknolojili-alttan-donduruculu-cift-kapili-buzdolabi-119185711?magaza=haneciogluticaret"
+    }
+  ]
+}
