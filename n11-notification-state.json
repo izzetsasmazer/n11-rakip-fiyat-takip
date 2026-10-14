@@ -121,26 +121,20 @@
     }
   ],
   "last_check": {
-    "verified_from": "2026-10-14T22:45:00Z",
-    "verified_to": "2026-10-14T23:19:34Z",
-    "commit_sha": "7daa819d52456e02f9094ec083ce077c5b2fcc0f",
-    "workflow_run_id": 38653373428,
-    "delivery": "telegram_send_step_success",
-    "diagnostic_completed": true,
+    "verified_from": "2026-10-14T23:31:31Z",
+    "verified_to": "2026-10-14T23:46:49Z",
     "scan": "complete_current_own_inventory",
-    "own_total": 40,
-    "own_links_found": 40,
-    "own_prices_read": 40,
-    "all_seller_panels_completed": 40,
-    "target_seller_catalog_checks": 120,
-    "target_offers_seen": 44,
-    "new_offers_delivered": 1,
+    "own_total": 41,
+    "own_links_found": 41,
+    "own_prices_read": 41,
+    "all_seller_panels_completed": 41,
+    "target_seller_catalog_checks": 123,
+    "target_offers_seen": 45,
+    "new_offers_delivered": 0,
+    "notification_candidates": 0,
     "reference_total": 41,
-    "reference_found": 40,
-    "reference_not_in_current_store": [
-      "10122"
-    ],
-    "note": "Own inventory and target catalog panels scanned 01:45–02:13 Europe/Istanbul. Only notification offer reverified on both seller-specific pages immediately before delivery. No assertion that rival price itself fell; 10121 Europe offer newly below current own price. Unchanged delivered offers retained.",
+    "reference_found": 41,
+    "reference_not_in_current_store": [],
     "found_catalog_ids": [
       "59831910",
       "122330014",
@@ -159,6 +153,7 @@
       "119185711",
       "1774636",
       "130629685",
+      "131629946",
       "76417732",
       "26716681",
       "129273228",
@@ -201,6 +196,7 @@
       "119185711",
       "1774636",
       "130629685",
+      "131629946",
       "76417732",
       "26716681",
       "129273228",
@@ -224,6 +220,445 @@
       "1378916",
       "55697247",
       "93286085"
-    ]
-  }
+    ],
+    "note": "Fresh screenshot scan; own store lists 41 products including 10122. All catalog seller panels scrolled to stable end; 45 target offers read from screenshots. 11 currently lower offers unchanged against successful delivered baseline; no outbox update or Telegram message. Own 10121 now 26675 TL, Europe 26680 TL is no longer below. Scan is a time window, not a simultaneous snapshot."
+  },
+  "last_observed_offers": [
+    {
+      "catalog_id": "131629946",
+      "seller": "erhangulener",
+      "own_price_kurus": 2957300,
+      "rival_price_kurus": 2957400
+    },
+    {
+      "catalog_id": "122330014",
+      "seller": "haneciogluticaret",
+      "own_price_kurus": 2759540,
+      "rival_price_kurus": 2469900
+    },
+    {
+      "catalog_id": "122330014",
+      "seller": "erhangulener",
+      "own_price_kurus": 2759540,
+      "rival_price_kurus": 2521996
+    },
+    {
+      "catalog_id": "125776510",
+      "seller": "erhangulener",
+      "own_price_kurus": 3035540,
+      "rival_price_kurus": 2950256
+    },
+    {
+      "catalog_id": "126000051",
+      "seller": "avrupabeyazesya",
+      "own_price_kurus": 2667500,
+      "rival_price_kurus": 2668000
+    },
+    {
+      "catalog_id": "126000051",
+      "seller": "haneciogluticaret",
+      "own_price_kurus": 2667500,
+      "rival_price_kurus": 3173908
+    },
+    {
+      "catalog_id": "122330277",
+      "seller": "haneciogluticaret",
+      "own_price_kurus": 2304800,
+      "rival_price_kurus": 2303900
+    },
+    {
+      "catalog_id": "122330277",
+      "seller": "erhangulener",
+      "own_price_kurus": 2304800,
+      "rival_price_kurus": 2333488
+    },
+    {
+      "catalog_id": "53229173",
+      "seller": "erhangulener",
+      "own_price_kurus": 2805800,
+      "rival_price_kurus": 2805900
+    },
+    {
+      "catalog_id": "128799406",
+      "seller": "avrupabeyazesya",
+      "own_price_kurus": 3196900,
+      "rival_price_kurus": 3197000
+    },
+    {
+      "catalog_id": "128799406",
+      "seller": "erhangulener",
+      "own_price_kurus": 3196900,
+      "rival_price_kurus": 3521208
+    },
+    {
+      "catalog_id": "122021236",
+      "seller": "haneciogluticaret",
+      "own_price_kurus": 3109140,
+      "rival_price_kurus": 3035908
+    },
+    {
+      "catalog_id": "75294073",
+      "seller": "erhangulener",
+      "own_price_kurus": 5169800,
+      "rival_price_kurus": 5169900
+    },
+    {
+      "catalog_id": "75294073",
+      "seller": "haneciogluticaret",
+      "own_price_kurus": 5169800,
+      "rival_price_kurus": 5887908
+    },
+    {
+      "catalog_id": "84396164",
+      "seller": "erhangulener",
+      "own_price_kurus": 5565540,
+      "rival_price_kurus": 5480900
+    },
+    {
+      "catalog_id": "84396164",
+      "seller": "haneciogluticaret",
+      "own_price_kurus": 5565540,
+      "rival_price_kurus": 6071908
+    },
+    {
+      "catalog_id": "119186548",
+      "seller": "erhangulener",
+      "own_price_kurus": 2253540,
+      "rival_price_kurus": 2279116
+    },
+    {
+      "catalog_id": "119186548",
+      "seller": "haneciogluticaret",
+      "own_price_kurus": 2253540,
+      "rival_price_kurus": 2391908
+    },
+    {
+      "catalog_id": "133470448",
+      "seller": "erhangulener",
+      "own_price_kurus": 2969500,
+      "rival_price_kurus": 3093040
+    },
+    {
+      "catalog_id": "84566973",
+      "seller": "erhangulener",
+      "own_price_kurus": 2659700,
+      "rival_price_kurus": 2659900
+    },
+    {
+      "catalog_id": "84566973",
+      "seller": "haneciogluticaret",
+      "own_price_kurus": 2659700,
+      "rival_price_kurus": 2943908
+    },
+    {
+      "catalog_id": "119184364",
+      "seller": "haneciogluticaret",
+      "own_price_kurus": 4419900,
+      "rival_price_kurus": 4420508
+    },
+    {
+      "catalog_id": "119184364",
+      "seller": "erhangulener",
+      "own_price_kurus": 4419900,
+      "rival_price_kurus": 4758516
+    },
+    {
+      "catalog_id": "119185711",
+      "seller": "haneciogluticaret",
+      "own_price_kurus": 4239500,
+      "rival_price_kurus": 4234900
+    },
+    {
+      "catalog_id": "119185711",
+      "seller": "erhangulener",
+      "own_price_kurus": 4239500,
+      "rival_price_kurus": 4264900
+    },
+    {
+      "catalog_id": "76417732",
+      "seller": "erhangulener",
+      "own_price_kurus": 3219540,
+      "rival_price_kurus": 3140604
+    },
+    {
+      "catalog_id": "76417732",
+      "seller": "haneciogluticaret",
+      "own_price_kurus": 3219540,
+      "rival_price_kurus": 3679908
+    },
+    {
+      "catalog_id": "26716681",
+      "seller": "erhangulener",
+      "own_price_kurus": 4829800,
+      "rival_price_kurus": 4829900
+    },
+    {
+      "catalog_id": "26716681",
+      "seller": "haneciogluticaret",
+      "own_price_kurus": 4829800,
+      "rival_price_kurus": 5243908
+    },
+    {
+      "catalog_id": "129273228",
+      "seller": "erhangulener",
+      "own_price_kurus": 3521400,
+      "rival_price_kurus": 3650100
+    },
+    {
+      "catalog_id": "57187573",
+      "seller": "erhangulener",
+      "own_price_kurus": 3659900,
+      "rival_price_kurus": 3744860
+    },
+    {
+      "catalog_id": "57187573",
+      "seller": "haneciogluticaret",
+      "own_price_kurus": 3659900,
+      "rival_price_kurus": 3955908
+    },
+    {
+      "catalog_id": "121973553",
+      "seller": "erhangulener",
+      "own_price_kurus": 2903060,
+      "rival_price_kurus": 2950256
+    },
+    {
+      "catalog_id": "131264934",
+      "seller": "erhangulener",
+      "own_price_kurus": 3689900,
+      "rival_price_kurus": 3769900
+    },
+    {
+      "catalog_id": "96222402",
+      "seller": "haneciogluticaret",
+      "own_price_kurus": 3311540,
+      "rival_price_kurus": 2667908
+    },
+    {
+      "catalog_id": "42888640",
+      "seller": "erhangulener",
+      "own_price_kurus": 5038992,
+      "rival_price_kurus": 5038992
+    },
+    {
+      "catalog_id": "42888640",
+      "seller": "haneciogluticaret",
+      "own_price_kurus": 5038992,
+      "rival_price_kurus": 5703908
+    },
+    {
+      "catalog_id": "59013959",
+      "seller": "haneciogluticaret",
+      "own_price_kurus": 6071540,
+      "rival_price_kurus": 6347908
+    },
+    {
+      "catalog_id": "134540814",
+      "seller": "erhangulener",
+      "own_price_kurus": 6240000,
+      "rival_price_kurus": 6293720
+    },
+    {
+      "catalog_id": "121973665",
+      "seller": "erhangulener",
+      "own_price_kurus": 2906740,
+      "rival_price_kurus": 2720028
+    },
+    {
+      "catalog_id": "60851107",
+      "seller": "haneciogluticaret",
+      "own_price_kurus": 4579900,
+      "rival_price_kurus": 4329900
+    },
+    {
+      "catalog_id": "60851107",
+      "seller": "erhangulener",
+      "own_price_kurus": 4579900,
+      "rival_price_kurus": 4579900
+    },
+    {
+      "catalog_id": "137300051",
+      "seller": "erhangulener",
+      "own_price_kurus": 5915140,
+      "rival_price_kurus": 5932988
+    },
+    {
+      "catalog_id": "122232596",
+      "seller": "erhangulener",
+      "own_price_kurus": 9171020,
+      "rival_price_kurus": 9288780
+    },
+    {
+      "catalog_id": "59214068",
+      "seller": "erhangulener",
+      "own_price_kurus": 4599908,
+      "rival_price_kurus": 4853644
+    }
+  ],
+  "last_observed_own_prices": [
+    {
+      "catalog_id": "59831910",
+      "price_kurus": 250250
+    },
+    {
+      "catalog_id": "122330014",
+      "price_kurus": 2759540
+    },
+    {
+      "catalog_id": "125776510",
+      "price_kurus": 3035540
+    },
+    {
+      "catalog_id": "126000051",
+      "price_kurus": 2667500
+    },
+    {
+      "catalog_id": "122330277",
+      "price_kurus": 2304800
+    },
+    {
+      "catalog_id": "53229173",
+      "price_kurus": 2805800
+    },
+    {
+      "catalog_id": "128799406",
+      "price_kurus": 3196900
+    },
+    {
+      "catalog_id": "122021236",
+      "price_kurus": 3109140
+    },
+    {
+      "catalog_id": "75294073",
+      "price_kurus": 5169800
+    },
+    {
+      "catalog_id": "84396164",
+      "price_kurus": 5565540
+    },
+    {
+      "catalog_id": "119186548",
+      "price_kurus": 2253540
+    },
+    {
+      "catalog_id": "133470448",
+      "price_kurus": 2969500
+    },
+    {
+      "catalog_id": "84566973",
+      "price_kurus": 2659700
+    },
+    {
+      "catalog_id": "119184364",
+      "price_kurus": 4419900
+    },
+    {
+      "catalog_id": "119185711",
+      "price_kurus": 4239500
+    },
+    {
+      "catalog_id": "1774636",
+      "price_kurus": 599900
+    },
+    {
+      "catalog_id": "130629685",
+      "price_kurus": 2929000
+    },
+    {
+      "catalog_id": "131629946",
+      "price_kurus": 2957300
+    },
+    {
+      "catalog_id": "76417732",
+      "price_kurus": 3219540
+    },
+    {
+      "catalog_id": "26716681",
+      "price_kurus": 4829800
+    },
+    {
+      "catalog_id": "129273228",
+      "price_kurus": 3521400
+    },
+    {
+      "catalog_id": "57187573",
+      "price_kurus": 3659900
+    },
+    {
+      "catalog_id": "121973553",
+      "price_kurus": 2903060
+    },
+    {
+      "catalog_id": "120214369",
+      "price_kurus": 4875540
+    },
+    {
+      "catalog_id": "131264934",
+      "price_kurus": 3689900
+    },
+    {
+      "catalog_id": "96222402",
+      "price_kurus": 3311540
+    },
+    {
+      "catalog_id": "131735088",
+      "price_kurus": 4139540
+    },
+    {
+      "catalog_id": "120389669",
+      "price_kurus": 5381540
+    },
+    {
+      "catalog_id": "124593855",
+      "price_kurus": 3293800
+    },
+    {
+      "catalog_id": "42888640",
+      "price_kurus": 5038992
+    },
+    {
+      "catalog_id": "59013959",
+      "price_kurus": 6071540
+    },
+    {
+      "catalog_id": "134540814",
+      "price_kurus": 6240000
+    },
+    {
+      "catalog_id": "121973665",
+      "price_kurus": 2906740
+    },
+    {
+      "catalog_id": "60851107",
+      "price_kurus": 4579900
+    },
+    {
+      "catalog_id": "137913583",
+      "price_kurus": 4507540
+    },
+    {
+      "catalog_id": "137300051",
+      "price_kurus": 5915140
+    },
+    {
+      "catalog_id": "122232596",
+      "price_kurus": 9171020
+    },
+    {
+      "catalog_id": "59214068",
+      "price_kurus": 4599908
+    },
+    {
+      "catalog_id": "1378916",
+      "price_kurus": 4599540
+    },
+    {
+      "catalog_id": "55697247",
+      "price_kurus": 8353140
+    },
+    {
+      "catalog_id": "93286085",
+      "price_kurus": 7267500
+    }
+  ]
 }
