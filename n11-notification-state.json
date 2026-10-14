@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "last_report": {
-    "verified_from": "2026-10-14T17:20:16Z",
-    "verified_to": "2026-10-14T18:33:45Z",
-    "commit_sha": "eff0a4ea1dbe359ce8195745e0412d78c2542fd4",
-    "workflow_run_id": 38616413560,
+    "verified_from": "2026-10-14T22:45:00Z",
+    "verified_to": "2026-10-14T23:19:34Z",
+    "commit_sha": "7daa819d52456e02f9094ec083ce077c5b2fcc0f",
+    "workflow_run_id": 38653373428,
     "delivery": "telegram_send_step_success",
     "diagnostic_completed": true,
     "scan": "complete_current_own_inventory",
@@ -14,13 +14,13 @@
     "all_seller_panels_completed": 40,
     "target_seller_catalog_checks": 120,
     "target_offers_seen": 44,
-    "new_offers_delivered": 4,
+    "new_offers_delivered": 1,
     "reference_total": 41,
     "reference_found": 40,
     "reference_not_in_current_store": [
       "10122"
     ],
-    "note": "Current own-store inventory and all visible sellers panels checked. Rival unrelated inventory not scanned. Notification offers reverified on own and seller-specific product pages before sending."
+    "note": "Own inventory and target catalog panels scanned 01:45–02:13 Europe/Istanbul. Only notification offer reverified on both seller-specific pages immediately before delivery. No assertion that rival price itself fell; 10121 Europe offer newly below current own price. Unchanged delivered offers retained."
   },
   "last_delivered_offers": [
     {
@@ -110,13 +110,21 @@
       "own_price_kurus": 4579900,
       "rival_price_kurus": 4329900,
       "url": "https://www.n11.com/urun/arcelik-274533-mb-532-lt-no-frost-kombi-tipi-buzdolabi-60851107?magaza=haneciogluticaret"
+    },
+    {
+      "catalog_id": "126000051",
+      "model": "10121 (beyaz)",
+      "seller": "avrupabeyazesya",
+      "own_price_kurus": 2674900,
+      "rival_price_kurus": 2668000,
+      "url": "https://www.n11.com/urun/arcelik-10121-1200-devir-10-kg-camasir-makinesi-126000051?magaza=avrupabeyazesya"
     }
   ],
   "last_check": {
-    "verified_from": "2026-10-14T17:20:16Z",
-    "verified_to": "2026-10-14T18:33:45Z",
-    "commit_sha": "eff0a4ea1dbe359ce8195745e0412d78c2542fd4",
-    "workflow_run_id": 38616413560,
+    "verified_from": "2026-10-14T22:45:00Z",
+    "verified_to": "2026-10-14T23:19:34Z",
+    "commit_sha": "7daa819d52456e02f9094ec083ce077c5b2fcc0f",
+    "workflow_run_id": 38653373428,
     "delivery": "telegram_send_step_success",
     "diagnostic_completed": true,
     "scan": "complete_current_own_inventory",
@@ -126,13 +134,13 @@
     "all_seller_panels_completed": 40,
     "target_seller_catalog_checks": 120,
     "target_offers_seen": 44,
-    "new_offers_delivered": 4,
+    "new_offers_delivered": 1,
     "reference_total": 41,
     "reference_found": 40,
     "reference_not_in_current_store": [
       "10122"
     ],
-    "note": "Current own-store inventory and all visible sellers panels checked. Rival unrelated inventory not scanned. Notification offers reverified on own and seller-specific product pages before sending.",
+    "note": "Own inventory and target catalog panels scanned 01:45–02:13 Europe/Istanbul. Only notification offer reverified on both seller-specific pages immediately before delivery. No assertion that rival price itself fell; 10121 Europe offer newly below current own price. Unchanged delivered offers retained.",
     "found_catalog_ids": [
       "59831910",
       "122330014",
