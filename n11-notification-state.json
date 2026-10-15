@@ -310,25 +310,30 @@
     }
   ],
   "last_check": {
-    "verified_from": "2026-10-15T11:46:11Z",
-    "verified_to": "2026-10-15T12:06:00Z",
+    "verified_from": "2026-10-15T13:00:00Z",
+    "verified_to": "2026-10-15T13:18:17Z",
     "scan": "complete_current_own_inventory",
-    "own_total": 40,
-    "own_links_found": 40,
-    "own_prices_read": 40,
-    "all_seller_panels_completed": 40,
-    "target_seller_catalog_checks": 120,
-    "target_offers_seen": 44,
-    "target_offers_below_own": 16,
+    "own_total": 39,
+    "own_links_found": 39,
+    "own_prices_read": 39,
+    "all_seller_panels_completed": 39,
+    "target_seller_catalog_checks": 117,
+    "target_offers_seen": 42,
+    "target_offers_below_own": 14,
     "new_offers_delivered": 0,
     "notification_candidates_in_checked_scope": 0,
     "reference_total": 41,
-    "reference_found": 40,
+    "reference_found": 39,
     "reference_not_found": [
       {
         "model": "A 600 B",
         "catalog_id": "119186548",
-        "reason": "not in current complete own store inventory; not assumed active"
+        "reason": "not in current complete own-store list; not assumed active"
+      },
+      {
+        "model": "270475 MB",
+        "catalog_id": "57187573",
+        "reason": "not in current complete own-store list; not assumed active"
       }
     ],
     "found_catalog_ids": [
@@ -353,7 +358,6 @@
       "26716681",
       "124593855",
       "129273228",
-      "57187573",
       "121973553",
       "120214369",
       "131264934",
@@ -395,7 +399,6 @@
       "26716681",
       "124593855",
       "129273228",
-      "57187573",
       "121973553",
       "120214369",
       "131264934",
@@ -437,7 +440,6 @@
       "26716681",
       "124593855",
       "129273228",
-      "57187573",
       "121973553",
       "120214369",
       "131264934",
@@ -461,12 +463,12 @@
     "unread_price_catalog_ids": [],
     "error": null,
     "access": {
-      "sasmazerltd": "current store total40;40 unique links;40 screenshot prices",
-      "avrupabeyazesya": "all40 catalog seller panels checked;4 offers read",
-      "erhangulener": "all40 catalog seller panels checked;24 offers read",
-      "haneciogluticaret": "all40 catalog seller panels checked;16 offers read"
+      "sasmazerltd": "39 current store total,39 unique links and39 screenshot prices",
+      "avrupabeyazesya": "all39 catalog panels checked;4 offers read",
+      "erhangulener": "all39 catalog panels checked;23 offers read",
+      "haneciogluticaret": "all39 catalog panels checked;15 offers read"
     },
-    "note": "Fresh complete own-store screenshot scan with overlapping scrolling and unique catalog link reconciliation, followed by all40 fully scrolled all-seller panels to stable end. Prices read from screenshots only; DOM used for identity, URLs and coverage only. All44 target offers match prior observed prices;16 below-own offers already delivered at unchanged rival prices, so0 notification candidates. Outbox unchanged and no Telegram message sent. Last report and16 delivered baselines preserved. A600B not present in current own list. No N11 writes or settings changes; unrelated rival inventory not scanned."
+    "note": "Fresh own-store overlapping screenshot scroll; lazy-loaded inventory reconciled39 total=39 unique catalog links=39 screenshot prices. All39 catalog seller panels scrolled to end; target sellers identified by observed links and screenshot prices. Temporary panel-opening nonresponses on9120DMX,A811iAD,570508EI resolved through visible UI; no remaining unchecked products. Same catalog/model/variant verified;10121/S separate,BEU9030D Bakir-Siyah.42 target offers read,14 below own; all below-own rival prices unchanged from delivered baseline,0 eligible.10121 own26664TL and570508MB own31819TL now below unchanged Avrupa26665TL and31820TL. No Telegram/outbox change. Historical16 delivered baselines and last successful delivery report preserved. A600B and270475MB absent from current own list, not assumed active. No N11 writes/settings changes or unrelated rival inventory scan."
   },
   "last_observed_offers": [
     {
@@ -490,13 +492,13 @@
     {
       "catalog_id": "126000051",
       "seller": "avrupabeyazesya",
-      "own_price_kurus": 2666900,
+      "own_price_kurus": 2666400,
       "rival_price_kurus": 2666500
     },
     {
       "catalog_id": "126000051",
       "seller": "haneciogluticaret",
-      "own_price_kurus": 2666900,
+      "own_price_kurus": 2666400,
       "rival_price_kurus": 3139409
     },
     {
@@ -520,13 +522,13 @@
     {
       "catalog_id": "128799406",
       "seller": "avrupabeyazesya",
-      "own_price_kurus": 3182900,
+      "own_price_kurus": 3181900,
       "rival_price_kurus": 3182000
     },
     {
       "catalog_id": "128799406",
       "seller": "erhangulener",
-      "own_price_kurus": 3182900,
+      "own_price_kurus": 3181900,
       "rival_price_kurus": 3482934
     },
     {
@@ -630,18 +632,6 @@
       "seller": "erhangulener",
       "own_price_kurus": 3521400,
       "rival_price_kurus": 3610425
-    },
-    {
-      "catalog_id": "57187573",
-      "seller": "erhangulener",
-      "own_price_kurus": 3659900,
-      "rival_price_kurus": 3704155
-    },
-    {
-      "catalog_id": "57187573",
-      "seller": "haneciogluticaret",
-      "own_price_kurus": 3659900,
-      "rival_price_kurus": 3912909
     },
     {
       "catalog_id": "121973553",
@@ -749,7 +739,7 @@
     },
     {
       "catalog_id": "126000051",
-      "price_kurus": 2666900
+      "price_kurus": 2666400
     },
     {
       "catalog_id": "122330277",
@@ -761,7 +751,7 @@
     },
     {
       "catalog_id": "128799406",
-      "price_kurus": 3182900
+      "price_kurus": 3181900
     },
     {
       "catalog_id": "84396164",
@@ -818,10 +808,6 @@
     {
       "catalog_id": "129273228",
       "price_kurus": 3521400
-    },
-    {
-      "catalog_id": "57187573",
-      "price_kurus": 3659900
     },
     {
       "catalog_id": "121973553",
@@ -907,6 +893,6 @@
     "resolved_at": "2026-10-15T04:31:11Z",
     "status": "resolved_current_full_scan"
   },
-  "last_observed_verified_from": "2026-10-15T11:46:11Z",
-  "last_observed_verified_to": "2026-10-15T12:06:00Z"
+  "last_observed_verified_from": "2026-10-15T13:00:00Z",
+  "last_observed_verified_to": "2026-10-15T13:18:17Z"
 }
