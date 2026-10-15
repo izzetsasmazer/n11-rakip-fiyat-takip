@@ -270,8 +270,8 @@
     }
   ],
   "last_check": {
-    "verified_from": "2026-10-15T05:08:21Z",
-    "verified_to": "2026-10-15T05:28:42Z",
+    "verified_from": "2026-10-15T06:09:04Z",
+    "verified_to": "2026-10-15T06:25:45Z",
     "scan": "complete_current_own_inventory",
     "own_total": 41,
     "own_links_found": 41,
@@ -280,8 +280,8 @@
     "target_seller_catalog_checks": 123,
     "target_offers_seen": 45,
     "target_offers_below_own": 13,
-    "new_offers_delivered": 2,
-    "notification_candidates_in_checked_scope": 2,
+    "new_offers_delivered": 0,
+    "notification_candidates_in_checked_scope": 0,
     "reference_total": 41,
     "reference_found": 41,
     "found_catalog_ids": [
@@ -421,7 +421,7 @@
       "erhangulener": "41 catalog seller panels checked; 26 offers read",
       "haneciogluticaret": "41 catalog seller panels checked; 17 offers read"
     },
-    "note": "Fresh screenshot scan: all 41 own store cards/prices and 41 fully scrolled seller panels, 45 target offers. All own prices and 43 rival prices match prior observations after current re-reading; Europe10121 now26670 and Europe570508MB now31960. Both own and rival seller-specific pages re-read from screenshots immediately before outbox delivery. Dynamic link-array storage issue reconciled against current store links; no missing catalogs. Brief exec-server transport interruption recovered without site security bypass. Other below-own offers unchanged, not resent. Full own-current-inventory scope; rival unrelated inventory not scanned."
+    "note": "Fresh screenshots in this control: all 41 own inventory prices and all 41 complete seller panels checked, 123 target seller/catalog checks, 45 target offers (Europe 2, Erhan 26, Hanecioglu 17). All 13 below-own target offers match successfully delivered baselines; none is new or further reduced. Erhan21325T decreased to48008.87 but remains above own45499.09, so not notified. Own21325T45499.09 and1532545495.45 read fresh. No outbox change or Telegram message. All current own links reconciled with screenshot-read IDs; reference41/41. Rival unrelated inventory not scanned."
   },
   "last_observed_offers": [
     {
@@ -463,8 +463,8 @@
     {
       "catalog_id": "59214068",
       "seller": "erhangulener",
-      "own_price_kurus": 4599908,
-      "rival_price_kurus": 4853644
+      "own_price_kurus": 4549909,
+      "rival_price_kurus": 4800887
     },
     {
       "catalog_id": "122330014",
@@ -854,11 +854,11 @@
     },
     {
       "catalog_id": "59214068",
-      "price_kurus": 4599908
+      "price_kurus": 4549909
     },
     {
       "catalog_id": "1378916",
-      "price_kurus": 4599540
+      "price_kurus": 4549545
     }
   ],
   "last_access_issue": {
@@ -872,6 +872,6 @@
     "resolved_at": "2026-10-15T04:31:11Z",
     "status": "resolved_current_full_scan"
   },
-  "last_observed_verified_from": "2026-10-15T05:08:21Z",
-  "last_observed_verified_to": "2026-10-15T05:28:42Z"
+  "last_observed_verified_from": "2026-10-15T06:09:04Z",
+  "last_observed_verified_to": "2026-10-15T06:25:45Z"
 }
