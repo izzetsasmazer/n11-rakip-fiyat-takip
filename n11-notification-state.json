@@ -1,128 +1,8 @@
 {
   "schema_version": 1,
   "last_report": {
-    "verified_from": "2026-10-14T22:45:00Z",
-    "verified_to": "2026-10-14T23:19:34Z",
-    "commit_sha": "7daa819d52456e02f9094ec083ce077c5b2fcc0f",
-    "workflow_run_id": 38653373428,
-    "delivery": "telegram_send_step_success",
-    "diagnostic_completed": true,
-    "scan": "complete_current_own_inventory",
-    "own_total": 40,
-    "own_links_found": 40,
-    "own_prices_read": 40,
-    "all_seller_panels_completed": 40,
-    "target_seller_catalog_checks": 120,
-    "target_offers_seen": 44,
-    "new_offers_delivered": 1,
-    "reference_total": 41,
-    "reference_found": 40,
-    "reference_not_in_current_store": [
-      "10122"
-    ],
-    "note": "Own inventory and target catalog panels scanned 01:45–02:13 Europe/Istanbul. Only notification offer reverified on both seller-specific pages immediately before delivery. No assertion that rival price itself fell; 10121 Europe offer newly below current own price. Unchanged delivered offers retained."
-  },
-  "last_delivered_offers": [
-    {
-      "catalog_id": "122330014",
-      "model": "A 710 I",
-      "seller": "erhangulener",
-      "own_price_kurus": 2759540,
-      "rival_price_kurus": 2521996,
-      "url": "https://www.n11.com/urun/arcelik-a-710-i-prestige-serisi-4-programli-14-kisilik-solo-bulasik-makinesi-122330014?magaza=erhangulener"
-    },
-    {
-      "catalog_id": "125776510",
-      "model": "902 KMX",
-      "seller": "erhangulener",
-      "own_price_kurus": 3035540,
-      "rival_price_kurus": 2950256,
-      "url": "https://www.n11.com/urun/arcelik-902-kmx-9-kg-kurutma-makinesi-125776510?magaza=erhangulener"
-    },
-    {
-      "catalog_id": "84396164",
-      "model": "278550 EI",
-      "seller": "erhangulener",
-      "own_price_kurus": 5565540,
-      "rival_price_kurus": 5480900,
-      "url": "https://www.n11.com/urun/arcelik-278550-ei-maxifit-no-frost-kombi-tipi-buzdolabi-84396164?magaza=erhangulener"
-    },
-    {
-      "catalog_id": "122330014",
-      "model": "A 710 I",
-      "seller": "haneciogluticaret",
-      "own_price_kurus": 2759540,
-      "rival_price_kurus": 2469900,
-      "url": "https://www.n11.com/urun/arcelik-a-710-i-prestige-serisi-4-programli-14-kisilik-solo-bulasik-makinesi-122330014?magaza=haneciogluticaret"
-    },
-    {
-      "catalog_id": "122330277",
-      "model": "A 710 B",
-      "seller": "haneciogluticaret",
-      "own_price_kurus": 2304800,
-      "rival_price_kurus": 2303900,
-      "url": "https://www.n11.com/urun/arcelik-a-710-b-prestige-serisi-4-programli-14-kisilik-solo-bulasik-makinesi-122330277?magaza=haneciogluticaret"
-    },
-    {
-      "catalog_id": "122021236",
-      "model": "570471 MB",
-      "seller": "haneciogluticaret",
-      "own_price_kurus": 3109140,
-      "rival_price_kurus": 3035908,
-      "url": "https://www.n11.com/urun/arcelik-570471-mb-471-l-cift-kapili-no-frost-buzdolabi-122021236?magaza=haneciogluticaret"
-    },
-    {
-      "catalog_id": "119185711",
-      "model": "270477 EB AI",
-      "seller": "haneciogluticaret",
-      "own_price_kurus": 4239500,
-      "rival_price_kurus": 4234900,
-      "url": "https://www.n11.com/urun/arcelik-270477-eb-ai-475-l-yapay-zeka-teknolojili-alttan-donduruculu-cift-kapili-buzdolabi-119185711?magaza=haneciogluticaret"
-    },
-    {
-      "catalog_id": "76417732",
-      "model": "11140 MX",
-      "seller": "erhangulener",
-      "own_price_kurus": 3219540,
-      "rival_price_kurus": 3140604,
-      "url": "https://www.n11.com/urun/arcelik-11140-mx-11-kg-camasir-makinesi-76417732?magaza=erhangulener"
-    },
-    {
-      "catalog_id": "121973665",
-      "model": "A 710 GC",
-      "seller": "erhangulener",
-      "own_price_kurus": 2906740,
-      "rival_price_kurus": 2720028,
-      "url": "https://www.n11.com/urun/arcelik-a-710-gc-6-programli-14-kisilik-bulasik-makinesi-121973665?magaza=erhangulener"
-    },
-    {
-      "catalog_id": "96222402",
-      "model": "2072 MI",
-      "seller": "haneciogluticaret",
-      "own_price_kurus": 3311540,
-      "rival_price_kurus": 2667908,
-      "url": "https://www.n11.com/urun/arcelik-2072-mi-244-l-7-bolmeli-statik-dikey-derin-dondurucu-96222402?magaza=haneciogluticaret"
-    },
-    {
-      "catalog_id": "60851107",
-      "model": "274533 MB",
-      "seller": "haneciogluticaret",
-      "own_price_kurus": 4579900,
-      "rival_price_kurus": 4329900,
-      "url": "https://www.n11.com/urun/arcelik-274533-mb-532-lt-no-frost-kombi-tipi-buzdolabi-60851107?magaza=haneciogluticaret"
-    },
-    {
-      "catalog_id": "126000051",
-      "model": "10121 (beyaz)",
-      "seller": "avrupabeyazesya",
-      "own_price_kurus": 2674900,
-      "rival_price_kurus": 2668000,
-      "url": "https://www.n11.com/urun/arcelik-10121-1200-devir-10-kg-camasir-makinesi-126000051?magaza=avrupabeyazesya"
-    }
-  ],
-  "last_check": {
-    "verified_from": "2026-10-15T04:14:07Z",
-    "verified_to": "2026-10-15T04:31:11Z",
+    "verified_from": "2026-10-15T05:08:21Z",
+    "verified_to": "2026-10-15T05:28:42Z",
     "scan": "complete_current_own_inventory",
     "own_total": 41,
     "own_links_found": 41,
@@ -130,9 +10,9 @@
     "all_seller_panels_completed": 41,
     "target_seller_catalog_checks": 123,
     "target_offers_seen": 45,
-    "target_offers_below_own": 11,
-    "new_offers_delivered": 0,
-    "notification_candidates_in_checked_scope": 0,
+    "target_offers_below_own": 13,
+    "new_offers_delivered": 2,
+    "notification_candidates_in_checked_scope": 2,
     "reference_total": 41,
     "reference_found": 41,
     "found_catalog_ids": [
@@ -272,7 +152,276 @@
       "erhangulener": "41 catalog seller panels checked; 26 offers read",
       "haneciogluticaret": "41 catalog seller panels checked; 17 offers read"
     },
-    "note": "Prices manually read from fresh cloud-browser screenshots, own complete store list and all 41 fully scrolled seller panels. All 45 current target offers equal previous observations; 11 below own already delivered at same rival prices. No outbox change or Telegram message. 10121 white own26675 vs Europe26680; 10121S own29695 vs Erhan30930.40. Previous transient 502 not reproduced; all ten previously unchecked catalog panels completed. Inventory reference41 not a fixed active list."
+    "note": "Fresh screenshot scan: all 41 own store cards/prices and 41 fully scrolled seller panels, 45 target offers. All own prices and 43 rival prices match prior observations after current re-reading; Europe10121 now26670 and Europe570508MB now31960. Both own and rival seller-specific pages re-read from screenshots immediately before outbox delivery. Dynamic link-array storage issue reconciled against current store links; no missing catalogs. Brief exec-server transport interruption recovered without site security bypass. Other below-own offers unchanged, not resent. Full own-current-inventory scope; rival unrelated inventory not scanned.",
+    "commit_sha": "98363e125bf6de85eaf672f8ffc165b7a16d36e1",
+    "workflow_run_id": 38686997054,
+    "delivery": "telegram_send_step_success",
+    "diagnostic_completed": true,
+    "notification_verified_at": "2026-10-15T05:28:42Z",
+    "delivered_offer_keys": [
+      "126000051|avrupabeyazesya",
+      "128799406|avrupabeyazesya"
+    ]
+  },
+  "last_delivered_offers": [
+    {
+      "catalog_id": "122330014",
+      "model": "A 710 I",
+      "seller": "erhangulener",
+      "own_price_kurus": 2759540,
+      "rival_price_kurus": 2521996,
+      "url": "https://www.n11.com/urun/arcelik-a-710-i-prestige-serisi-4-programli-14-kisilik-solo-bulasik-makinesi-122330014?magaza=erhangulener"
+    },
+    {
+      "catalog_id": "125776510",
+      "model": "902 KMX",
+      "seller": "erhangulener",
+      "own_price_kurus": 3035540,
+      "rival_price_kurus": 2950256,
+      "url": "https://www.n11.com/urun/arcelik-902-kmx-9-kg-kurutma-makinesi-125776510?magaza=erhangulener"
+    },
+    {
+      "catalog_id": "84396164",
+      "model": "278550 EI",
+      "seller": "erhangulener",
+      "own_price_kurus": 5565540,
+      "rival_price_kurus": 5480900,
+      "url": "https://www.n11.com/urun/arcelik-278550-ei-maxifit-no-frost-kombi-tipi-buzdolabi-84396164?magaza=erhangulener"
+    },
+    {
+      "catalog_id": "122330014",
+      "model": "A 710 I",
+      "seller": "haneciogluticaret",
+      "own_price_kurus": 2759540,
+      "rival_price_kurus": 2469900,
+      "url": "https://www.n11.com/urun/arcelik-a-710-i-prestige-serisi-4-programli-14-kisilik-solo-bulasik-makinesi-122330014?magaza=haneciogluticaret"
+    },
+    {
+      "catalog_id": "122330277",
+      "model": "A 710 B",
+      "seller": "haneciogluticaret",
+      "own_price_kurus": 2304800,
+      "rival_price_kurus": 2303900,
+      "url": "https://www.n11.com/urun/arcelik-a-710-b-prestige-serisi-4-programli-14-kisilik-solo-bulasik-makinesi-122330277?magaza=haneciogluticaret"
+    },
+    {
+      "catalog_id": "122021236",
+      "model": "570471 MB",
+      "seller": "haneciogluticaret",
+      "own_price_kurus": 3109140,
+      "rival_price_kurus": 3035908,
+      "url": "https://www.n11.com/urun/arcelik-570471-mb-471-l-cift-kapili-no-frost-buzdolabi-122021236?magaza=haneciogluticaret"
+    },
+    {
+      "catalog_id": "119185711",
+      "model": "270477 EB AI",
+      "seller": "haneciogluticaret",
+      "own_price_kurus": 4239500,
+      "rival_price_kurus": 4234900,
+      "url": "https://www.n11.com/urun/arcelik-270477-eb-ai-475-l-yapay-zeka-teknolojili-alttan-donduruculu-cift-kapili-buzdolabi-119185711?magaza=haneciogluticaret"
+    },
+    {
+      "catalog_id": "76417732",
+      "model": "11140 MX",
+      "seller": "erhangulener",
+      "own_price_kurus": 3219540,
+      "rival_price_kurus": 3140604,
+      "url": "https://www.n11.com/urun/arcelik-11140-mx-11-kg-camasir-makinesi-76417732?magaza=erhangulener"
+    },
+    {
+      "catalog_id": "121973665",
+      "model": "A 710 GC",
+      "seller": "erhangulener",
+      "own_price_kurus": 2906740,
+      "rival_price_kurus": 2720028,
+      "url": "https://www.n11.com/urun/arcelik-a-710-gc-6-programli-14-kisilik-bulasik-makinesi-121973665?magaza=erhangulener"
+    },
+    {
+      "catalog_id": "96222402",
+      "model": "2072 MI",
+      "seller": "haneciogluticaret",
+      "own_price_kurus": 3311540,
+      "rival_price_kurus": 2667908,
+      "url": "https://www.n11.com/urun/arcelik-2072-mi-244-l-7-bolmeli-statik-dikey-derin-dondurucu-96222402?magaza=haneciogluticaret"
+    },
+    {
+      "catalog_id": "60851107",
+      "model": "274533 MB",
+      "seller": "haneciogluticaret",
+      "own_price_kurus": 4579900,
+      "rival_price_kurus": 4329900,
+      "url": "https://www.n11.com/urun/arcelik-274533-mb-532-lt-no-frost-kombi-tipi-buzdolabi-60851107?magaza=haneciogluticaret"
+    },
+    {
+      "catalog_id": "126000051",
+      "model": "10121 (beyaz)",
+      "seller": "avrupabeyazesya",
+      "own_price_kurus": 2667500,
+      "rival_price_kurus": 2667000,
+      "url": "https://www.n11.com/urun/arcelik-10121-1200-devir-10-kg-camasir-makinesi-126000051?magaza=avrupabeyazesya"
+    },
+    {
+      "catalog_id": "128799406",
+      "model": "570508 MB (beyaz)",
+      "seller": "avrupabeyazesya",
+      "own_price_kurus": 3196900,
+      "rival_price_kurus": 3196000,
+      "url": "https://www.n11.com/urun/arcelik-570508-mb-508-l-cift-kapili-no-frost-buzdolabi-128799406?magaza=avrupabeyazesya"
+    }
+  ],
+  "last_check": {
+    "verified_from": "2026-10-15T05:08:21Z",
+    "verified_to": "2026-10-15T05:28:42Z",
+    "scan": "complete_current_own_inventory",
+    "own_total": 41,
+    "own_links_found": 41,
+    "own_prices_read": 41,
+    "all_seller_panels_completed": 41,
+    "target_seller_catalog_checks": 123,
+    "target_offers_seen": 45,
+    "target_offers_below_own": 13,
+    "new_offers_delivered": 2,
+    "notification_candidates_in_checked_scope": 2,
+    "reference_total": 41,
+    "reference_found": 41,
+    "found_catalog_ids": [
+      "59831910",
+      "122330014",
+      "125776510",
+      "126000051",
+      "122330277",
+      "53229173",
+      "128799406",
+      "84396164",
+      "122021236",
+      "75294073",
+      "119186548",
+      "133470448",
+      "84566973",
+      "119185711",
+      "130629685",
+      "119184364",
+      "1774636",
+      "131629946",
+      "76417732",
+      "26716681",
+      "124593855",
+      "129273228",
+      "57187573",
+      "121973553",
+      "120214369",
+      "131264934",
+      "96222402",
+      "120389669",
+      "42888640",
+      "59013959",
+      "134540814",
+      "121973665",
+      "131735088",
+      "60851107",
+      "137913583",
+      "55697247",
+      "93286085",
+      "137300051",
+      "122232596",
+      "59214068",
+      "1378916"
+    ],
+    "screenshot_price_read_ids": [
+      "59831910",
+      "122330014",
+      "125776510",
+      "126000051",
+      "122330277",
+      "53229173",
+      "128799406",
+      "84396164",
+      "122021236",
+      "75294073",
+      "119186548",
+      "133470448",
+      "84566973",
+      "119185711",
+      "130629685",
+      "119184364",
+      "1774636",
+      "131629946",
+      "76417732",
+      "26716681",
+      "124593855",
+      "129273228",
+      "57187573",
+      "121973553",
+      "120214369",
+      "131264934",
+      "96222402",
+      "120389669",
+      "42888640",
+      "59013959",
+      "134540814",
+      "121973665",
+      "131735088",
+      "60851107",
+      "137913583",
+      "55697247",
+      "93286085",
+      "137300051",
+      "122232596",
+      "59214068",
+      "1378916"
+    ],
+    "target_catalog_ids_completed": [
+      "59831910",
+      "122330014",
+      "125776510",
+      "126000051",
+      "122330277",
+      "53229173",
+      "128799406",
+      "84396164",
+      "122021236",
+      "75294073",
+      "119186548",
+      "133470448",
+      "84566973",
+      "119185711",
+      "130629685",
+      "119184364",
+      "1774636",
+      "131629946",
+      "76417732",
+      "26716681",
+      "124593855",
+      "129273228",
+      "57187573",
+      "121973553",
+      "120214369",
+      "131264934",
+      "96222402",
+      "120389669",
+      "42888640",
+      "59013959",
+      "134540814",
+      "121973665",
+      "131735088",
+      "60851107",
+      "137913583",
+      "55697247",
+      "93286085",
+      "137300051",
+      "122232596",
+      "59214068",
+      "1378916"
+    ],
+    "target_catalog_ids_not_checked": [],
+    "error": null,
+    "access": {
+      "sasmazerltd": "current store list and 41 prices read",
+      "avrupabeyazesya": "41 catalog seller panels checked; 2 offers read",
+      "erhangulener": "41 catalog seller panels checked; 26 offers read",
+      "haneciogluticaret": "41 catalog seller panels checked; 17 offers read"
+    },
+    "note": "Fresh screenshot scan: all 41 own store cards/prices and 41 fully scrolled seller panels, 45 target offers. All own prices and 43 rival prices match prior observations after current re-reading; Europe10121 now26670 and Europe570508MB now31960. Both own and rival seller-specific pages re-read from screenshots immediately before outbox delivery. Dynamic link-array storage issue reconciled against current store links; no missing catalogs. Brief exec-server transport interruption recovered without site security bypass. Other below-own offers unchanged, not resent. Full own-current-inventory scope; rival unrelated inventory not scanned."
   },
   "last_observed_offers": [
     {
@@ -339,7 +488,7 @@
       "catalog_id": "126000051",
       "seller": "avrupabeyazesya",
       "own_price_kurus": 2667500,
-      "rival_price_kurus": 2668000
+      "rival_price_kurus": 2667000
     },
     {
       "catalog_id": "126000051",
@@ -369,7 +518,7 @@
       "catalog_id": "128799406",
       "seller": "avrupabeyazesya",
       "own_price_kurus": 3196900,
-      "rival_price_kurus": 3197000
+      "rival_price_kurus": 3196000
     },
     {
       "catalog_id": "128799406",
@@ -723,6 +872,6 @@
     "resolved_at": "2026-10-15T04:31:11Z",
     "status": "resolved_current_full_scan"
   },
-  "last_observed_verified_from": "2026-10-15T04:14:07Z",
-  "last_observed_verified_to": "2026-10-15T04:31:11Z"
+  "last_observed_verified_from": "2026-10-15T05:08:21Z",
+  "last_observed_verified_to": "2026-10-15T05:28:42Z"
 }
