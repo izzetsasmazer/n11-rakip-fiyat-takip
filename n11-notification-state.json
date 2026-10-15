@@ -121,15 +121,16 @@
     }
   ],
   "last_check": {
-    "verified_from": "2026-10-15T01:07:54Z",
-    "verified_to": "2026-10-15T01:31:19Z",
-    "scan": "partial_target_catalog_scan",
+    "verified_from": "2026-10-15T04:14:07Z",
+    "verified_to": "2026-10-15T04:31:11Z",
+    "scan": "complete_current_own_inventory",
     "own_total": 41,
     "own_links_found": 41,
     "own_prices_read": 41,
-    "all_seller_panels_completed": 31,
-    "target_seller_catalog_checks": 93,
-    "target_offers_seen": 38,
+    "all_seller_panels_completed": 41,
+    "target_seller_catalog_checks": 123,
+    "target_offers_seen": 45,
+    "target_offers_below_own": 11,
     "new_offers_delivered": 0,
     "notification_candidates_in_checked_scope": 0,
     "reference_total": 41,
@@ -142,40 +143,40 @@
       "122330277",
       "53229173",
       "128799406",
+      "84396164",
       "122021236",
       "75294073",
-      "84396164",
       "119186548",
       "133470448",
       "84566973",
-      "119184364",
       "119185711",
-      "1774636",
       "130629685",
+      "119184364",
+      "1774636",
       "131629946",
       "76417732",
       "26716681",
+      "124593855",
       "129273228",
       "57187573",
       "121973553",
       "120214369",
       "131264934",
       "96222402",
-      "131735088",
       "120389669",
-      "124593855",
       "42888640",
       "59013959",
       "134540814",
       "121973665",
+      "131735088",
       "60851107",
       "137913583",
+      "55697247",
+      "93286085",
       "137300051",
       "122232596",
       "59214068",
-      "1378916",
-      "55697247",
-      "93286085"
+      "1378916"
     ],
     "screenshot_price_read_ids": [
       "59831910",
@@ -185,40 +186,40 @@
       "122330277",
       "53229173",
       "128799406",
+      "84396164",
       "122021236",
       "75294073",
-      "84396164",
       "119186548",
       "133470448",
       "84566973",
-      "119184364",
       "119185711",
-      "1774636",
       "130629685",
+      "119184364",
+      "1774636",
       "131629946",
       "76417732",
       "26716681",
+      "124593855",
       "129273228",
       "57187573",
       "121973553",
       "120214369",
       "131264934",
       "96222402",
-      "131735088",
       "120389669",
-      "124593855",
       "42888640",
       "59013959",
       "134540814",
       "121973665",
+      "131735088",
       "60851107",
       "137913583",
+      "55697247",
+      "93286085",
       "137300051",
       "122232596",
       "59214068",
-      "1378916",
-      "55697247",
-      "93286085"
+      "1378916"
     ],
     "target_catalog_ids_completed": [
       "59831910",
@@ -228,52 +229,93 @@
       "122330277",
       "53229173",
       "128799406",
+      "84396164",
       "122021236",
       "75294073",
-      "84396164",
       "119186548",
       "133470448",
       "84566973",
-      "119184364",
       "119185711",
-      "1774636",
       "130629685",
+      "119184364",
+      "1774636",
       "131629946",
       "76417732",
       "26716681",
+      "124593855",
       "129273228",
       "57187573",
       "121973553",
       "120214369",
       "131264934",
       "96222402",
-      "131735088",
       "120389669",
-      "124593855",
       "42888640",
-      "59013959"
-    ],
-    "target_catalog_ids_not_checked": [
+      "59013959",
       "134540814",
       "121973665",
+      "131735088",
       "60851107",
       "137913583",
+      "55697247",
+      "93286085",
       "137300051",
       "122232596",
       "59214068",
-      "1378916",
-      "55697247",
-      "93286085"
+      "1378916"
     ],
-    "error": "502 Bad Gateway; [Errno 111] Connection refused remained after one reload on catalog 134540814; earlier navigation and screenshot timeouts recovered. No bot/security denial evidence. Transient connection failure; recurring task left enabled.",
-    "note": "All own prices read from fresh screenshots. 38 target offers read across 31 complete seller panels, no new lower or further-reduced delivered offers in checked scope. Remaining ten catalog target offers not verified. Historical notification baseline and prior observations retained, not counted as current data. No outbox update or Telegram message."
+    "target_catalog_ids_not_checked": [],
+    "error": null,
+    "access": {
+      "sasmazerltd": "current store list and 41 prices read",
+      "avrupabeyazesya": "41 catalog seller panels checked; 2 offers read",
+      "erhangulener": "41 catalog seller panels checked; 26 offers read",
+      "haneciogluticaret": "41 catalog seller panels checked; 17 offers read"
+    },
+    "note": "Prices manually read from fresh cloud-browser screenshots, own complete store list and all 41 fully scrolled seller panels. All 45 current target offers equal previous observations; 11 below own already delivered at same rival prices. No outbox change or Telegram message. 10121 white own26675 vs Europe26680; 10121S own29695 vs Erhan30930.40. Previous transient 502 not reproduced; all ten previously unchecked catalog panels completed. Inventory reference41 not a fixed active list."
   },
   "last_observed_offers": [
     {
-      "catalog_id": "131629946",
+      "catalog_id": "134540814",
       "seller": "erhangulener",
-      "own_price_kurus": 2957300,
-      "rival_price_kurus": 2957400
+      "own_price_kurus": 6240000,
+      "rival_price_kurus": 6293720
+    },
+    {
+      "catalog_id": "121973665",
+      "seller": "erhangulener",
+      "own_price_kurus": 2906740,
+      "rival_price_kurus": 2720028
+    },
+    {
+      "catalog_id": "60851107",
+      "seller": "haneciogluticaret",
+      "own_price_kurus": 4579900,
+      "rival_price_kurus": 4329900
+    },
+    {
+      "catalog_id": "60851107",
+      "seller": "erhangulener",
+      "own_price_kurus": 4579900,
+      "rival_price_kurus": 4579900
+    },
+    {
+      "catalog_id": "137300051",
+      "seller": "erhangulener",
+      "own_price_kurus": 5915140,
+      "rival_price_kurus": 5932988
+    },
+    {
+      "catalog_id": "122232596",
+      "seller": "erhangulener",
+      "own_price_kurus": 9171020,
+      "rival_price_kurus": 9288780
+    },
+    {
+      "catalog_id": "59214068",
+      "seller": "erhangulener",
+      "own_price_kurus": 4599908,
+      "rival_price_kurus": 4853644
     },
     {
       "catalog_id": "122330014",
@@ -336,6 +378,18 @@
       "rival_price_kurus": 3521208
     },
     {
+      "catalog_id": "84396164",
+      "seller": "erhangulener",
+      "own_price_kurus": 5565540,
+      "rival_price_kurus": 5480900
+    },
+    {
+      "catalog_id": "84396164",
+      "seller": "haneciogluticaret",
+      "own_price_kurus": 5565540,
+      "rival_price_kurus": 6071908
+    },
+    {
       "catalog_id": "122021236",
       "seller": "haneciogluticaret",
       "own_price_kurus": 3109140,
@@ -352,18 +406,6 @@
       "seller": "haneciogluticaret",
       "own_price_kurus": 5169800,
       "rival_price_kurus": 5887908
-    },
-    {
-      "catalog_id": "84396164",
-      "seller": "erhangulener",
-      "own_price_kurus": 5565540,
-      "rival_price_kurus": 5480900
-    },
-    {
-      "catalog_id": "84396164",
-      "seller": "haneciogluticaret",
-      "own_price_kurus": 5565540,
-      "rival_price_kurus": 6071908
     },
     {
       "catalog_id": "119186548",
@@ -396,6 +438,18 @@
       "rival_price_kurus": 2943908
     },
     {
+      "catalog_id": "119185711",
+      "seller": "haneciogluticaret",
+      "own_price_kurus": 4239500,
+      "rival_price_kurus": 4234900
+    },
+    {
+      "catalog_id": "119185711",
+      "seller": "erhangulener",
+      "own_price_kurus": 4239500,
+      "rival_price_kurus": 4264900
+    },
+    {
       "catalog_id": "119184364",
       "seller": "haneciogluticaret",
       "own_price_kurus": 4419900,
@@ -408,16 +462,10 @@
       "rival_price_kurus": 4758516
     },
     {
-      "catalog_id": "119185711",
-      "seller": "haneciogluticaret",
-      "own_price_kurus": 4239500,
-      "rival_price_kurus": 4234900
-    },
-    {
-      "catalog_id": "119185711",
+      "catalog_id": "131629946",
       "seller": "erhangulener",
-      "own_price_kurus": 4239500,
-      "rival_price_kurus": 4264900
+      "own_price_kurus": 2957300,
+      "rival_price_kurus": 2957400
     },
     {
       "catalog_id": "76417732",
@@ -496,48 +544,6 @@
       "seller": "haneciogluticaret",
       "own_price_kurus": 6071540,
       "rival_price_kurus": 6347908
-    },
-    {
-      "catalog_id": "134540814",
-      "seller": "erhangulener",
-      "own_price_kurus": 6240000,
-      "rival_price_kurus": 6293720
-    },
-    {
-      "catalog_id": "121973665",
-      "seller": "erhangulener",
-      "own_price_kurus": 2906740,
-      "rival_price_kurus": 2720028
-    },
-    {
-      "catalog_id": "60851107",
-      "seller": "haneciogluticaret",
-      "own_price_kurus": 4579900,
-      "rival_price_kurus": 4329900
-    },
-    {
-      "catalog_id": "60851107",
-      "seller": "erhangulener",
-      "own_price_kurus": 4579900,
-      "rival_price_kurus": 4579900
-    },
-    {
-      "catalog_id": "137300051",
-      "seller": "erhangulener",
-      "own_price_kurus": 5915140,
-      "rival_price_kurus": 5932988
-    },
-    {
-      "catalog_id": "122232596",
-      "seller": "erhangulener",
-      "own_price_kurus": 9171020,
-      "rival_price_kurus": 9288780
-    },
-    {
-      "catalog_id": "59214068",
-      "seller": "erhangulener",
-      "own_price_kurus": 4599908,
-      "rival_price_kurus": 4853644
     }
   ],
   "last_observed_own_prices": [
@@ -570,16 +576,16 @@
       "price_kurus": 3196900
     },
     {
+      "catalog_id": "84396164",
+      "price_kurus": 5565540
+    },
+    {
       "catalog_id": "122021236",
       "price_kurus": 3109140
     },
     {
       "catalog_id": "75294073",
       "price_kurus": 5169800
-    },
-    {
-      "catalog_id": "84396164",
-      "price_kurus": 5565540
     },
     {
       "catalog_id": "119186548",
@@ -594,20 +600,20 @@
       "price_kurus": 2659700
     },
     {
-      "catalog_id": "119184364",
-      "price_kurus": 4419900
-    },
-    {
       "catalog_id": "119185711",
       "price_kurus": 4239500
     },
     {
-      "catalog_id": "1774636",
-      "price_kurus": 599900
-    },
-    {
       "catalog_id": "130629685",
       "price_kurus": 2929000
+    },
+    {
+      "catalog_id": "119184364",
+      "price_kurus": 4419900
+    },
+    {
+      "catalog_id": "1774636",
+      "price_kurus": 599900
     },
     {
       "catalog_id": "131629946",
@@ -620,6 +626,10 @@
     {
       "catalog_id": "26716681",
       "price_kurus": 4829800
+    },
+    {
+      "catalog_id": "124593855",
+      "price_kurus": 3293800
     },
     {
       "catalog_id": "129273228",
@@ -646,16 +656,8 @@
       "price_kurus": 3311540
     },
     {
-      "catalog_id": "131735088",
-      "price_kurus": 4139540
-    },
-    {
       "catalog_id": "120389669",
       "price_kurus": 5381540
-    },
-    {
-      "catalog_id": "124593855",
-      "price_kurus": 3293800
     },
     {
       "catalog_id": "42888640",
@@ -674,12 +676,24 @@
       "price_kurus": 2906740
     },
     {
+      "catalog_id": "131735088",
+      "price_kurus": 4139540
+    },
+    {
       "catalog_id": "60851107",
       "price_kurus": 4579900
     },
     {
       "catalog_id": "137913583",
       "price_kurus": 4507540
+    },
+    {
+      "catalog_id": "55697247",
+      "price_kurus": 8353140
+    },
+    {
+      "catalog_id": "93286085",
+      "price_kurus": 7267500
     },
     {
       "catalog_id": "137300051",
@@ -696,14 +710,6 @@
     {
       "catalog_id": "1378916",
       "price_kurus": 4599540
-    },
-    {
-      "catalog_id": "55697247",
-      "price_kurus": 8353140
-    },
-    {
-      "catalog_id": "93286085",
-      "price_kurus": 7267500
     }
   ],
   "last_access_issue": {
@@ -713,6 +719,10 @@
     "reported_via": "chatgpt",
     "reported_at": "2026-10-15T01:31:19Z",
     "scope": "10 target catalog panels not checked",
-    "transient": true
-  }
+    "transient": true,
+    "resolved_at": "2026-10-15T04:31:11Z",
+    "status": "resolved_current_full_scan"
+  },
+  "last_observed_verified_from": "2026-10-15T04:14:07Z",
+  "last_observed_verified_to": "2026-10-15T04:31:11Z"
 }
