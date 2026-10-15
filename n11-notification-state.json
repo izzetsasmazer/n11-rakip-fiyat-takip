@@ -270,15 +270,15 @@
     }
   ],
   "last_check": {
-    "verified_from": "2026-10-15T07:17:41Z",
-    "verified_to": "2026-10-15T07:35:19Z",
+    "verified_from": "2026-10-15T08:10:48Z",
+    "verified_to": "2026-10-15T08:46:20Z",
     "scan": "complete_current_own_inventory",
     "own_total": 41,
     "own_links_found": 41,
     "own_prices_read": 41,
     "all_seller_panels_completed": 41,
     "target_seller_catalog_checks": 123,
-    "target_offers_seen": 45,
+    "target_offers_seen": 44,
     "target_offers_below_own": 13,
     "new_offers_delivered": 0,
     "notification_candidates_in_checked_scope": 0,
@@ -416,12 +416,12 @@
     "target_catalog_ids_not_checked": [],
     "error": null,
     "access": {
-      "sasmazerltd": "current store list and 41 prices read",
-      "avrupabeyazesya": "41 catalog seller panels checked; 2 offers read",
-      "erhangulener": "41 catalog seller panels checked; 26 offers read",
-      "haneciogluticaret": "41 catalog seller panels checked; 17 offers read"
+      "sasmazerltd": "Current store inventory41 links and41 screenshot prices read",
+      "avrupabeyazesya": "41 catalog panels fully scrolled;2 offers read",
+      "erhangulener": "41 catalog panels fully scrolled;25 offers read",
+      "haneciogluticaret": "41 catalog panels fully scrolled;17 offers read"
     },
-    "note": "Fresh screenshot scan this control: all 41 own current store prices and all 41 fully scrolled seller panels checked, 123 target seller/catalog checks, 45 offers (Europe2 Erhan26 Hanecioglu17). All prices re-read and match previous observation. 13 below-own offers match successful delivery baselines, no new lower or further reduced offer. 10121 and10121S checked separately; BEU9030D Bakir-Siyah variant checked. Store displayed total41 equals41 unique current catalog links and41 screenshot-read own prices; no missing cards. No outbox change or Telegram message; prior delivery records preserved. Unrelated rival inventory intentionally not scanned."
+    "note": "Fresh screenshots during the stated interval:41 own prices and all41 fully scrolled seller panels;123 target seller/catalog checks,44 offers(Avrupa2 Erhan25 Hanecioglu17).13 below-own offers match successful delivery baselines: no new lower or further reduced offer; outbox unchanged. Erhan10122 offer was absent in the fully scrolled current catalog panel; previous observation was not reused as a current offer.10121/10121S and A811 variants checked separately. Own total41 matches41 unique current catalog links and41 screenshot-read prices. Navigation/click timeouts recovered through normal page observation and interaction; no unresolved access error. Prices have individual observation times within this interval, not simultaneous end-time quotes. No Telegram report containing aged prices was sent. Prior delivery records preserved; unrelated rival inventory intentionally not scanned."
   },
   "last_observed_offers": [
     {
@@ -567,12 +567,6 @@
       "seller": "erhangulener",
       "own_price_kurus": 4419900,
       "rival_price_kurus": 4758516
-    },
-    {
-      "catalog_id": "131629946",
-      "seller": "erhangulener",
-      "own_price_kurus": 2957300,
-      "rival_price_kurus": 2957400
     },
     {
       "catalog_id": "76417732",
@@ -872,6 +866,6 @@
     "resolved_at": "2026-10-15T04:31:11Z",
     "status": "resolved_current_full_scan"
   },
-  "last_observed_verified_from": "2026-10-15T07:17:41Z",
-  "last_observed_verified_to": "2026-10-15T07:35:19Z"
+  "last_observed_verified_from": "2026-10-15T08:10:48Z",
+  "last_observed_verified_to": "2026-10-15T08:46:20Z"
 }
