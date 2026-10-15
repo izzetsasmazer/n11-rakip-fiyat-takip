@@ -310,32 +310,18 @@
     }
   ],
   "last_check": {
-    "verified_from": "2026-10-15T13:00:00Z",
-    "verified_to": "2026-10-15T13:18:17Z",
-    "scan": "complete_current_own_inventory",
-    "own_total": 39,
-    "own_links_found": 39,
-    "own_prices_read": 39,
-    "all_seller_panels_completed": 39,
-    "target_seller_catalog_checks": 117,
-    "target_offers_seen": 42,
-    "target_offers_below_own": 14,
+    "verified_from": "2026-10-15T16:46:00Z",
+    "verified_to": "2026-10-15T16:49:10Z",
+    "scan": "partial_target_scan",
+    "own_total": 40,
+    "own_links_found": 40,
+    "own_prices_read": 40,
+    "all_seller_panels_completed": 0,
+    "target_seller_catalog_checks": 0,
+    "target_offers_seen": 0,
+    "target_offers_below_own": null,
     "new_offers_delivered": 0,
-    "notification_candidates_in_checked_scope": 0,
-    "reference_total": 41,
-    "reference_found": 39,
-    "reference_not_found": [
-      {
-        "model": "A 600 B",
-        "catalog_id": "119186548",
-        "reason": "not in current complete own-store list; not assumed active"
-      },
-      {
-        "model": "270475 MB",
-        "catalog_id": "57187573",
-        "reason": "not in current complete own-store list; not assumed active"
-      }
-    ],
+    "notification_candidates_in_checked_scope": null,
     "found_catalog_ids": [
       "59831910",
       "122330014",
@@ -358,6 +344,7 @@
       "26716681",
       "124593855",
       "129273228",
+      "57187573",
       "121973553",
       "120214369",
       "131264934",
@@ -399,6 +386,7 @@
       "26716681",
       "124593855",
       "129273228",
+      "57187573",
       "121973553",
       "120214369",
       "131264934",
@@ -418,7 +406,9 @@
       "59214068",
       "1378916"
     ],
-    "target_catalog_ids_completed": [
+    "unread_price_catalog_ids": [],
+    "target_catalog_ids_completed": [],
+    "target_catalog_ids_not_checked": [
       "59831910",
       "122330014",
       "125776510",
@@ -440,6 +430,7 @@
       "26716681",
       "124593855",
       "129273228",
+      "57187573",
       "121973553",
       "120214369",
       "131264934",
@@ -459,16 +450,14 @@
       "59214068",
       "1378916"
     ],
-    "target_catalog_ids_not_checked": [],
-    "unread_price_catalog_ids": [],
-    "error": null,
+    "error": "browser_tool_output_overflow_and_panel_interaction_unreliable",
     "access": {
-      "sasmazerltd": "39 current store total,39 unique links and39 screenshot prices",
-      "avrupabeyazesya": "all39 catalog panels checked;4 offers read",
-      "erhangulener": "all39 catalog panels checked;23 offers read",
-      "haneciogluticaret": "all39 catalog panels checked;15 offers read"
+      "sasmazerltd": "40 current unique catalogs and40 screenshot prices; accessible",
+      "avrupabeyazesya": "not verified this attempt",
+      "erhangulener": "not verified this attempt",
+      "haneciogluticaret": "not verified this attempt"
     },
-    "note": "Fresh own-store overlapping screenshot scroll; lazy-loaded inventory reconciled39 total=39 unique catalog links=39 screenshot prices. All39 catalog seller panels scrolled to end; target sellers identified by observed links and screenshot prices. Temporary panel-opening nonresponses on9120DMX,A811iAD,570508EI resolved through visible UI; no remaining unchecked products. Same catalog/model/variant verified;10121/S separate,BEU9030D Bakir-Siyah.42 target offers read,14 below own; all below-own rival prices unchanged from delivered baseline,0 eligible.10121 own26664TL and570508MB own31819TL now below unchanged Avrupa26665TL and31820TL. No Telegram/outbox change. Historical16 delivered baselines and last successful delivery report preserved. A600B and270475MB absent from current own list, not assumed active. No N11 writes/settings changes or unrelated rival inventory scan."
+    "note": "Fresh overlapping store screenshots; all40 actual prices read, links reconciled40. Runtime reset did not stop telemetry-error output floods. Screenshot-only observations allowed complete own inventory read but reliable seller-panel interactions not restored. A710I panel attempt navigated to cennetmuameryesilort; excluded entirely from rival checks. No target seller price or absence conclusions. Preserve historical delivery and rival observation records; those remain historical, not current. Outbox untouched."
   },
   "last_observed_offers": [
     {
@@ -731,15 +720,15 @@
     },
     {
       "catalog_id": "122330014",
-      "price_kurus": 2729545
+      "price_kurus": 2759540
     },
     {
       "catalog_id": "125776510",
-      "price_kurus": 3002545
+      "price_kurus": 3035540
     },
     {
       "catalog_id": "126000051",
-      "price_kurus": 2666400
+      "price_kurus": 2664900
     },
     {
       "catalog_id": "122330277",
@@ -751,15 +740,15 @@
     },
     {
       "catalog_id": "128799406",
-      "price_kurus": 3181900
+      "price_kurus": 3178900
     },
     {
       "catalog_id": "84396164",
-      "price_kurus": 5505045
+      "price_kurus": 5565540
     },
     {
       "catalog_id": "122021236",
-      "price_kurus": 3075345
+      "price_kurus": 3109140
     },
     {
       "catalog_id": "75294073",
@@ -767,7 +756,7 @@
     },
     {
       "catalog_id": "133470448",
-      "price_kurus": 2666900
+      "price_kurus": 2969500
     },
     {
       "catalog_id": "84566973",
@@ -795,7 +784,7 @@
     },
     {
       "catalog_id": "76417732",
-      "price_kurus": 3184545
+      "price_kurus": 3219540
     },
     {
       "catalog_id": "26716681",
@@ -810,12 +799,16 @@
       "price_kurus": 3521400
     },
     {
+      "catalog_id": "57187573",
+      "price_kurus": 3659900
+    },
+    {
       "catalog_id": "121973553",
-      "price_kurus": 2871505
+      "price_kurus": 2903060
     },
     {
       "catalog_id": "120214369",
-      "price_kurus": 4822545
+      "price_kurus": 4875540
     },
     {
       "catalog_id": "131264934",
@@ -823,11 +816,11 @@
     },
     {
       "catalog_id": "96222402",
-      "price_kurus": 3275545
+      "price_kurus": 3311540
     },
     {
       "catalog_id": "120389669",
-      "price_kurus": 5323045
+      "price_kurus": 5381540
     },
     {
       "catalog_id": "42888640",
@@ -835,7 +828,7 @@
     },
     {
       "catalog_id": "59013959",
-      "price_kurus": 6005545
+      "price_kurus": 6071540
     },
     {
       "catalog_id": "134540814",
@@ -843,11 +836,11 @@
     },
     {
       "catalog_id": "121973665",
-      "price_kurus": 2875145
+      "price_kurus": 2906740
     },
     {
       "catalog_id": "131735088",
-      "price_kurus": 4094545
+      "price_kurus": 4139540
     },
     {
       "catalog_id": "60851107",
@@ -855,11 +848,11 @@
     },
     {
       "catalog_id": "137913583",
-      "price_kurus": 4458545
+      "price_kurus": 4507540
     },
     {
       "catalog_id": "55697247",
-      "price_kurus": 8262345
+      "price_kurus": 8353140
     },
     {
       "catalog_id": "93286085",
@@ -867,11 +860,11 @@
     },
     {
       "catalog_id": "137300051",
-      "price_kurus": 5850845
+      "price_kurus": 5915140
     },
     {
       "catalog_id": "122232596",
-      "price_kurus": 9071335
+      "price_kurus": 9171020
     },
     {
       "catalog_id": "59214068",
@@ -885,13 +878,15 @@
   "last_access_issue": {
     "code": "browser_tool_output_overflow",
     "first_seen_at": "2026-10-15T16:27:00Z",
-    "last_seen_at": "2026-10-15T16:43:20Z",
+    "last_seen_at": "2026-10-15T16:49:10Z",
     "reported_via": "chatgpt",
     "reported_at": "2026-10-15T16:33:00Z",
     "transient": true,
-    "status": "retry_failed",
+    "status": "own_scan_recovered_target_scan_unresolved",
     "reason": "N11 store opens and shows40 products; repeated browser runtime telemetry errors flood output, including after runtime reset. No fresh full rival scan or no-change conclusion."
   },
   "last_observed_verified_from": "2026-10-15T13:00:00Z",
-  "last_observed_verified_to": "2026-10-15T13:18:17Z"
+  "last_observed_verified_to": "2026-10-15T13:18:17Z",
+  "last_observed_own_verified_from": "2026-10-15T16:46:00Z",
+  "last_observed_own_verified_to": "2026-10-15T16:47:30Z"
 }
