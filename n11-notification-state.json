@@ -311,7 +311,7 @@
   ],
   "last_check": {
     "verified_from": "2026-10-15T21:45:00Z",
-    "verified_to": "2026-10-15T21:57:37Z",
+    "verified_to": "2026-10-15T22:05:16Z",
     "scan": "partial_target_scan_in_progress",
     "own_total": 44,
     "own_links_found": 44,
@@ -409,9 +409,9 @@
       "64360339"
     ],
     "unread_price_catalog_ids": [],
-    "all_seller_panels_completed": 5,
-    "target_seller_catalog_checks": 15,
-    "target_offers_seen": 10,
+    "all_seller_panels_completed": 10,
+    "target_seller_catalog_checks": 30,
+    "target_offers_seen": 18,
     "notification_candidates_in_checked_scope": 0,
     "new_offers_delivered": 0,
     "target_catalog_ids_completed": [
@@ -419,7 +419,12 @@
       "130819037",
       "119189689",
       "64360339",
-      "122330014"
+      "122330014",
+      "122021236",
+      "75294073",
+      "133470448",
+      "84566973",
+      "119185711"
     ],
     "target_catalog_ids_not_checked": [
       "59831910",
@@ -429,11 +434,6 @@
       "53229173",
       "128799406",
       "84396164",
-      "122021236",
-      "75294073",
-      "133470448",
-      "84566973",
-      "119185711",
       "130629685",
       "119184364",
       "1774636",
@@ -470,11 +470,6 @@
       "53229173",
       "128799406",
       "84396164",
-      "122021236",
-      "75294073",
-      "133470448",
-      "84566973",
-      "119185711",
       "130629685",
       "119184364",
       "1774636",
@@ -504,7 +499,7 @@
       "1378916"
     ],
     "error": null,
-    "note": "IN PROGRESS partial checkpoint only. Own store44 current catalog links and44 screenshot prices reconciled; A600B returned, A811B/802KMX/12140MX newly included. Only5 seller panels completed in this run: A600B16 sellers,A811B5,802KMX19,12140MX17,A710I17. All three targets checked in these5 only;39 remain unchecked.10 target prices read from screenshots. No eligible new below-own offer in checked scope. A710I Hanecioglu unchanged, Erhan above prior delivered price; other checked target offers above own. No Telegram sent. Historical last_report and last_delivered_offers preserved; historical observations are not current."
+    "note": "IN PROGRESS partial checkpoint.44 own prices read fresh from screenshots.10/44 fully scrolled all-seller panels,30 target seller/catalog checks,18 actual target offers read.34 catalogs remain unchecked. No eligible new below-own or further-decreased delivered offer in checked scope; no Telegram sent. Panels completed indices10,13,42,43,1,8,9,11,12,14 in current44 inventory. Historical successful delivery and baseline preserved verbatim; no whole-inventory no-change claim."
   },
   "last_observed_offers": [
     {
