@@ -310,17 +310,12 @@
     }
   ],
   "last_check": {
-    "verified_from": "2026-10-15T17:36:25Z",
-    "verified_to": "2026-10-15T17:47:52Z",
+    "verified_from": "2026-10-15T21:45:00Z",
+    "verified_to": "2026-10-15T21:57:37Z",
     "scan": "partial_target_scan_in_progress",
-    "own_total": 40,
-    "own_links_found": 40,
-    "own_prices_read": 40,
-    "all_seller_panels_completed": 5,
-    "target_seller_catalog_checks": 15,
-    "target_offers_seen": 6,
-    "new_offers_delivered": 0,
-    "notification_candidates_in_checked_scope": 1,
+    "own_total": 44,
+    "own_links_found": 44,
+    "own_prices_read": 44,
     "found_catalog_ids": [
       "59831910",
       "122330014",
@@ -332,8 +327,10 @@
       "84396164",
       "122021236",
       "75294073",
+      "119186548",
       "133470448",
       "84566973",
+      "130819037",
       "119185711",
       "130629685",
       "119184364",
@@ -361,7 +358,9 @@
       "137300051",
       "122232596",
       "59214068",
-      "1378916"
+      "1378916",
+      "119189689",
+      "64360339"
     ],
     "screenshot_price_read_ids": [
       "59831910",
@@ -374,8 +373,10 @@
       "84396164",
       "122021236",
       "75294073",
+      "119186548",
       "133470448",
       "84566973",
+      "130819037",
       "119185711",
       "130629685",
       "119184364",
@@ -403,18 +404,29 @@
       "137300051",
       "122232596",
       "59214068",
-      "1378916"
+      "1378916",
+      "119189689",
+      "64360339"
     ],
     "unread_price_catalog_ids": [],
+    "all_seller_panels_completed": 5,
+    "target_seller_catalog_checks": 15,
+    "target_offers_seen": 10,
+    "notification_candidates_in_checked_scope": 0,
+    "new_offers_delivered": 0,
     "target_catalog_ids_completed": [
+      "119186548",
+      "130819037",
+      "119189689",
+      "64360339",
+      "122330014"
+    ],
+    "target_catalog_ids_not_checked": [
       "59831910",
       "125776510",
       "126000051",
       "122330277",
-      "53229173"
-    ],
-    "target_catalog_ids_not_checked": [
-      "122330014",
+      "53229173",
       "128799406",
       "84396164",
       "122021236",
@@ -451,7 +463,11 @@
       "1378916"
     ],
     "unchecked_catalog_ids": [
-      "122330014",
+      "59831910",
+      "125776510",
+      "126000051",
+      "122330277",
+      "53229173",
       "128799406",
       "84396164",
       "122021236",
@@ -488,45 +504,7 @@
       "1378916"
     ],
     "error": null,
-    "note": "IN PROGRESS checkpoint only. Fresh own40 screenshot prices from17:37–17:40UTC. Five fully scrolled seller panels: Xiaomi59831910(4),902KMX125776510(16),10121white126000051(17),A710B122330277(19),9120DMX53229173(14). All three target sellers checked in those5 catalogs only.35 catalogs remain unchecked.10121white Avrupa screenshot26640TL below own26649TL and prior delivered26665TL: pending fresh seller-page revalidation before any alert. No Telegram sent this run; historical last_report and last_delivered_offers preserved verbatim.",
-    "current_verified_target_observations": [
-      {
-        "catalog_id": "125776510",
-        "seller": "erhangulener",
-        "price_kurus": 2950256,
-        "verified_at": "2026-10-15T17:42:36.717Z"
-      },
-      {
-        "catalog_id": "126000051",
-        "seller": "avrupabeyazesya",
-        "price_kurus": 2664000,
-        "verified_at": "2026-10-15T17:45:05.542Z"
-      },
-      {
-        "catalog_id": "126000051",
-        "seller": "haneciogluticaret",
-        "price_kurus": 3173908,
-        "verified_at": "2026-10-15T17:45:34.918Z"
-      },
-      {
-        "catalog_id": "122330277",
-        "seller": "haneciogluticaret",
-        "price_kurus": 2303900,
-        "verified_at": "2026-10-15T17:46:29.430Z"
-      },
-      {
-        "catalog_id": "122330277",
-        "seller": "erhangulener",
-        "price_kurus": 2333488,
-        "verified_at": "2026-10-15T17:46:29.430Z"
-      },
-      {
-        "catalog_id": "53229173",
-        "seller": "erhangulener",
-        "price_kurus": 2805900,
-        "verified_at": "2026-10-15T17:47:38.751Z"
-      }
-    ]
+    "note": "IN PROGRESS partial checkpoint only. Own store44 current catalog links and44 screenshot prices reconciled; A600B returned, A811B/802KMX/12140MX newly included. Only5 seller panels completed in this run: A600B16 sellers,A811B5,802KMX19,12140MX17,A710I17. All three targets checked in these5 only;39 remain unchecked.10 target prices read from screenshots. No eligible new below-own offer in checked scope. A710I Hanecioglu unchanged, Erhan above prior delivered price; other checked target offers above own. No Telegram sent. Historical last_report and last_delivered_offers preserved; historical observations are not current."
   },
   "last_observed_offers": [
     {
@@ -797,7 +775,7 @@
     },
     {
       "catalog_id": "126000051",
-      "price_kurus": 2664900
+      "price_kurus": 2663700
     },
     {
       "catalog_id": "122330277",
@@ -809,7 +787,7 @@
     },
     {
       "catalog_id": "128799406",
-      "price_kurus": 3178900
+      "price_kurus": 3177900
     },
     {
       "catalog_id": "84396164",
@@ -824,12 +802,20 @@
       "price_kurus": 5169800
     },
     {
+      "catalog_id": "119186548",
+      "price_kurus": 2253540
+    },
+    {
       "catalog_id": "133470448",
       "price_kurus": 2969500
     },
     {
       "catalog_id": "84566973",
       "price_kurus": 2659700
+    },
+    {
+      "catalog_id": "130819037",
+      "price_kurus": 2841900
     },
     {
       "catalog_id": "119185711",
@@ -942,6 +928,14 @@
     {
       "catalog_id": "1378916",
       "price_kurus": 4549545
+    },
+    {
+      "catalog_id": "119189689",
+      "price_kurus": 2428900
+    },
+    {
+      "catalog_id": "64360339",
+      "price_kurus": 3313900
     }
   ],
   "last_access_issue": {
@@ -956,8 +950,8 @@
   },
   "last_observed_verified_from": "2026-10-15T13:00:00Z",
   "last_observed_verified_to": "2026-10-15T13:18:17Z",
-  "last_observed_own_verified_from": "2026-10-15T16:46:00Z",
-  "last_observed_own_verified_to": "2026-10-15T16:47:30Z",
+  "last_observed_own_verified_from": "2026-10-15T21:46:00Z",
+  "last_observed_own_verified_to": "2026-10-15T21:50:29.369Z",
   "last_repair_smoke_test": {
     "tested_at": "2026-10-15T17:02:41.636Z",
     "automation_prompt_update_verified": true,
