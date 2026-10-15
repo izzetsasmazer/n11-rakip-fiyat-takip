@@ -311,7 +311,7 @@
   ],
   "last_check": {
     "verified_from": "2026-10-15T21:45:00Z",
-    "verified_to": "2026-10-15T22:05:16Z",
+    "verified_to": "2026-10-15T22:12:49Z",
     "scan": "partial_target_scan_in_progress",
     "own_total": 44,
     "own_links_found": 44,
@@ -409,9 +409,9 @@
       "64360339"
     ],
     "unread_price_catalog_ids": [],
-    "all_seller_panels_completed": 10,
-    "target_seller_catalog_checks": 30,
-    "target_offers_seen": 18,
+    "all_seller_panels_completed": 15,
+    "target_seller_catalog_checks": 45,
+    "target_offers_seen": 22,
     "notification_candidates_in_checked_scope": 0,
     "new_offers_delivered": 0,
     "target_catalog_ids_completed": [
@@ -424,7 +424,12 @@
       "75294073",
       "133470448",
       "84566973",
-      "119185711"
+      "119185711",
+      "130629685",
+      "119184364",
+      "1774636",
+      "131629946",
+      "76417732"
     ],
     "target_catalog_ids_not_checked": [
       "59831910",
@@ -434,11 +439,6 @@
       "53229173",
       "128799406",
       "84396164",
-      "130629685",
-      "119184364",
-      "1774636",
-      "131629946",
-      "76417732",
       "26716681",
       "124593855",
       "129273228",
@@ -470,11 +470,6 @@
       "53229173",
       "128799406",
       "84396164",
-      "130629685",
-      "119184364",
-      "1774636",
-      "131629946",
-      "76417732",
       "26716681",
       "124593855",
       "129273228",
@@ -499,7 +494,7 @@
       "1378916"
     ],
     "error": null,
-    "note": "IN PROGRESS partial checkpoint.44 own prices read fresh from screenshots.10/44 fully scrolled all-seller panels,30 target seller/catalog checks,18 actual target offers read.34 catalogs remain unchecked. No eligible new below-own or further-decreased delivered offer in checked scope; no Telegram sent. Panels completed indices10,13,42,43,1,8,9,11,12,14 in current44 inventory. Historical successful delivery and baseline preserved verbatim; no whole-inventory no-change claim."
+    "note": "IN PROGRESS partial scan.44 own screenshot prices reconciled.15/44 seller panels completed,45 target seller/catalog checks,22 target prices read.29 catalogs remain unchecked. No eligible new notification in checked scope. Last5 completed: A811i11 sellers(no targets),270477EI AI13(2 target prices),BEU9030D Bakir-Siyah11(no targets),10122 12(no targets),11140MX14(2 target prices). No Telegram sent; historical last_report/baseline preserved."
   },
   "last_observed_offers": [
     {
