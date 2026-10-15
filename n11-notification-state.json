@@ -310,18 +310,17 @@
     }
   ],
   "last_check": {
-    "verified_from": "2026-10-15T16:46:00Z",
-    "verified_to": "2026-10-15T16:49:10Z",
-    "scan": "partial_target_scan",
+    "verified_from": "2026-10-15T17:36:25Z",
+    "verified_to": "2026-10-15T17:47:52Z",
+    "scan": "partial_target_scan_in_progress",
     "own_total": 40,
     "own_links_found": 40,
     "own_prices_read": 40,
-    "all_seller_panels_completed": 0,
-    "target_seller_catalog_checks": 0,
-    "target_offers_seen": 0,
-    "target_offers_below_own": null,
+    "all_seller_panels_completed": 5,
+    "target_seller_catalog_checks": 15,
+    "target_offers_seen": 6,
     "new_offers_delivered": 0,
-    "notification_candidates_in_checked_scope": null,
+    "notification_candidates_in_checked_scope": 1,
     "found_catalog_ids": [
       "59831910",
       "122330014",
@@ -407,14 +406,15 @@
       "1378916"
     ],
     "unread_price_catalog_ids": [],
-    "target_catalog_ids_completed": [],
-    "target_catalog_ids_not_checked": [
+    "target_catalog_ids_completed": [
       "59831910",
-      "122330014",
       "125776510",
       "126000051",
       "122330277",
-      "53229173",
+      "53229173"
+    ],
+    "target_catalog_ids_not_checked": [
+      "122330014",
       "128799406",
       "84396164",
       "122021236",
@@ -450,14 +450,83 @@
       "59214068",
       "1378916"
     ],
-    "error": "browser_tool_output_overflow_and_panel_interaction_unreliable",
-    "access": {
-      "sasmazerltd": "40 current unique catalogs and40 screenshot prices; accessible",
-      "avrupabeyazesya": "not verified this attempt",
-      "erhangulener": "not verified this attempt",
-      "haneciogluticaret": "not verified this attempt"
-    },
-    "note": "Fresh overlapping store screenshots; all40 actual prices read, links reconciled40. Runtime reset did not stop telemetry-error output floods. Screenshot-only observations allowed complete own inventory read but reliable seller-panel interactions not restored. A710I panel attempt navigated to cennetmuameryesilort; excluded entirely from rival checks. No target seller price or absence conclusions. Preserve historical delivery and rival observation records; those remain historical, not current. Outbox untouched."
+    "unchecked_catalog_ids": [
+      "122330014",
+      "128799406",
+      "84396164",
+      "122021236",
+      "75294073",
+      "133470448",
+      "84566973",
+      "119185711",
+      "130629685",
+      "119184364",
+      "1774636",
+      "131629946",
+      "76417732",
+      "26716681",
+      "124593855",
+      "129273228",
+      "57187573",
+      "121973553",
+      "120214369",
+      "131264934",
+      "96222402",
+      "120389669",
+      "42888640",
+      "59013959",
+      "134540814",
+      "121973665",
+      "131735088",
+      "60851107",
+      "137913583",
+      "55697247",
+      "93286085",
+      "137300051",
+      "122232596",
+      "59214068",
+      "1378916"
+    ],
+    "error": null,
+    "note": "IN PROGRESS checkpoint only. Fresh own40 screenshot prices from17:37–17:40UTC. Five fully scrolled seller panels: Xiaomi59831910(4),902KMX125776510(16),10121white126000051(17),A710B122330277(19),9120DMX53229173(14). All three target sellers checked in those5 catalogs only.35 catalogs remain unchecked.10121white Avrupa screenshot26640TL below own26649TL and prior delivered26665TL: pending fresh seller-page revalidation before any alert. No Telegram sent this run; historical last_report and last_delivered_offers preserved verbatim.",
+    "current_verified_target_observations": [
+      {
+        "catalog_id": "125776510",
+        "seller": "erhangulener",
+        "price_kurus": 2950256,
+        "verified_at": "2026-10-15T17:42:36.717Z"
+      },
+      {
+        "catalog_id": "126000051",
+        "seller": "avrupabeyazesya",
+        "price_kurus": 2664000,
+        "verified_at": "2026-10-15T17:45:05.542Z"
+      },
+      {
+        "catalog_id": "126000051",
+        "seller": "haneciogluticaret",
+        "price_kurus": 3173908,
+        "verified_at": "2026-10-15T17:45:34.918Z"
+      },
+      {
+        "catalog_id": "122330277",
+        "seller": "haneciogluticaret",
+        "price_kurus": 2303900,
+        "verified_at": "2026-10-15T17:46:29.430Z"
+      },
+      {
+        "catalog_id": "122330277",
+        "seller": "erhangulener",
+        "price_kurus": 2333488,
+        "verified_at": "2026-10-15T17:46:29.430Z"
+      },
+      {
+        "catalog_id": "53229173",
+        "seller": "erhangulener",
+        "price_kurus": 2805900,
+        "verified_at": "2026-10-15T17:47:38.751Z"
+      }
+    ]
   },
   "last_observed_offers": [
     {
