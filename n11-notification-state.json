@@ -1,20 +1,27 @@
 {
   "schema_version": 1,
   "last_report": {
-    "verified_from": "2026-10-15T05:08:21Z",
-    "verified_to": "2026-10-15T05:28:42Z",
+    "verified_from": "2026-10-15T11:15:54Z",
+    "verified_to": "2026-10-15T11:40:39Z",
     "scan": "complete_current_own_inventory",
-    "own_total": 41,
-    "own_links_found": 41,
-    "own_prices_read": 41,
-    "all_seller_panels_completed": 41,
-    "target_seller_catalog_checks": 123,
-    "target_offers_seen": 45,
-    "target_offers_below_own": 13,
-    "new_offers_delivered": 2,
-    "notification_candidates_in_checked_scope": 2,
+    "own_total": 40,
+    "own_links_found": 40,
+    "own_prices_read": 40,
+    "all_seller_panels_completed": 40,
+    "target_seller_catalog_checks": 120,
+    "target_offers_seen": 44,
+    "target_offers_below_own": 16,
+    "new_offers_delivered": 12,
+    "notification_candidates_in_checked_scope": 12,
     "reference_total": 41,
-    "reference_found": 41,
+    "reference_found": 40,
+    "reference_not_found": [
+      {
+        "model": "A 600 B",
+        "catalog_id": "119186548",
+        "reason": "not in current complete own store inventory; not assumed active"
+      }
+    ],
     "found_catalog_ids": [
       "59831910",
       "122330014",
@@ -26,7 +33,6 @@
       "84396164",
       "122021236",
       "75294073",
-      "119186548",
       "133470448",
       "84566973",
       "119185711",
@@ -69,7 +75,6 @@
       "84396164",
       "122021236",
       "75294073",
-      "119186548",
       "133470448",
       "84566973",
       "119185711",
@@ -112,7 +117,6 @@
       "84396164",
       "122021236",
       "75294073",
-      "119186548",
       "133470448",
       "84566973",
       "119185711",
@@ -147,45 +151,57 @@
     "target_catalog_ids_not_checked": [],
     "error": null,
     "access": {
-      "sasmazerltd": "current store list and 41 prices read",
-      "avrupabeyazesya": "41 catalog seller panels checked; 2 offers read",
-      "erhangulener": "41 catalog seller panels checked; 26 offers read",
-      "haneciogluticaret": "41 catalog seller panels checked; 17 offers read"
+      "sasmazerltd": "current store total40 and40 unique links and40 screenshot prices",
+      "avrupabeyazesya": "all40 catalog seller panels checked;4 offers read",
+      "erhangulener": "all40 catalog seller panels checked;24 offers read",
+      "haneciogluticaret": "all40 catalog seller panels checked;16 offers read"
     },
-    "note": "Fresh screenshot scan: all 41 own store cards/prices and 41 fully scrolled seller panels, 45 target offers. All own prices and 43 rival prices match prior observations after current re-reading; Europe10121 now26670 and Europe570508MB now31960. Both own and rival seller-specific pages re-read from screenshots immediately before outbox delivery. Dynamic link-array storage issue reconciled against current store links; no missing catalogs. Brief exec-server transport interruption recovered without site security bypass. Other below-own offers unchanged, not resent. Full own-current-inventory scope; rival unrelated inventory not scanned.",
-    "commit_sha": "98363e125bf6de85eaf672f8ffc165b7a16d36e1",
-    "workflow_run_id": 38686997054,
+    "note": "Fresh complete current inventory screenshot scan and fully scrolled all-seller panels. A600B absent from own current list, not assumed active.16 below-own offers:12 notification candidates(3 newly below-own offers,9 further reduced previously delivered offers);4 unchanged below-own not resent. All12 candidates' own and rival seller-specific pages re-read in screenshots from11:35 to11:40UTC before outbox at11:42UTC. Loading placeholders on902KMX own,270477EI Hanecioglu and2072MI own were not accepted: actual prices captured afterward. Same catalog/model/color/variant verified;10121 and10121S separate;BEU9030D Bakir-Siyah selected. Prior baselines preserved outside current scope. No N11 writes or account changes; unrelated rival inventory not scanned. Telegram workflow exact head commit and send step success verified.",
+    "commit_sha": "e3dcc01dbd4977cfe1225003c969cd167737a3dd",
+    "workflow_run_id": 38729210991,
     "delivery": "telegram_send_step_success",
     "diagnostic_completed": true,
-    "notification_verified_at": "2026-10-15T05:28:42Z",
+    "notification_verified_at": "2026-10-15T11:42:02Z",
+    "notification_price_verified_from": "2026-10-15T11:35:30Z",
+    "notification_price_verified_to": "2026-10-15T11:40:39Z",
     "delivered_offer_keys": [
+      "122330014|erhangulener",
+      "125776510|erhangulener",
       "126000051|avrupabeyazesya",
-      "128799406|avrupabeyazesya"
+      "128799406|avrupabeyazesya",
+      "84396164|erhangulener",
+      "122021236|haneciogluticaret",
+      "119184364|haneciogluticaret",
+      "76417732|erhangulener",
+      "96222402|haneciogluticaret",
+      "134540814|erhangulener",
+      "121973665|erhangulener",
+      "137913583|avrupabeyazesya"
     ]
   },
   "last_delivered_offers": [
     {
       "catalog_id": "122330014",
-      "model": "A 710 I",
       "seller": "erhangulener",
-      "own_price_kurus": 2759540,
-      "rival_price_kurus": 2521996,
+      "own_price_kurus": 2729545,
+      "rival_price_kurus": 2494583,
+      "model": "A 710 I",
       "url": "https://www.n11.com/urun/arcelik-a-710-i-prestige-serisi-4-programli-14-kisilik-solo-bulasik-makinesi-122330014?magaza=erhangulener"
     },
     {
       "catalog_id": "125776510",
-      "model": "902 KMX",
       "seller": "erhangulener",
-      "own_price_kurus": 3035540,
-      "rival_price_kurus": 2950256,
+      "own_price_kurus": 3002545,
+      "rival_price_kurus": 2918188,
+      "model": "902 KMX",
       "url": "https://www.n11.com/urun/arcelik-902-kmx-9-kg-kurutma-makinesi-125776510?magaza=erhangulener"
     },
     {
       "catalog_id": "84396164",
-      "model": "278550 EI",
       "seller": "erhangulener",
-      "own_price_kurus": 5565540,
-      "rival_price_kurus": 5480900,
+      "own_price_kurus": 5505045,
+      "rival_price_kurus": 5421325,
+      "model": "278550 EI Inox",
       "url": "https://www.n11.com/urun/arcelik-278550-ei-maxifit-no-frost-kombi-tipi-buzdolabi-84396164?magaza=erhangulener"
     },
     {
@@ -206,10 +222,10 @@
     },
     {
       "catalog_id": "122021236",
-      "model": "570471 MB",
       "seller": "haneciogluticaret",
-      "own_price_kurus": 3109140,
-      "rival_price_kurus": 3035908,
+      "own_price_kurus": 3075345,
+      "rival_price_kurus": 3002909,
+      "model": "570471 MB beyaz",
       "url": "https://www.n11.com/urun/arcelik-570471-mb-471-l-cift-kapili-no-frost-buzdolabi-122021236?magaza=haneciogluticaret"
     },
     {
@@ -222,26 +238,26 @@
     },
     {
       "catalog_id": "76417732",
-      "model": "11140 MX",
       "seller": "erhangulener",
-      "own_price_kurus": 3219540,
-      "rival_price_kurus": 3140604,
+      "own_price_kurus": 3184545,
+      "rival_price_kurus": 3106467,
+      "model": "11140 MX",
       "url": "https://www.n11.com/urun/arcelik-11140-mx-11-kg-camasir-makinesi-76417732?magaza=erhangulener"
     },
     {
       "catalog_id": "121973665",
-      "model": "A 710 GC",
       "seller": "erhangulener",
-      "own_price_kurus": 2906740,
-      "rival_price_kurus": 2720028,
+      "own_price_kurus": 2875145,
+      "rival_price_kurus": 2690462,
+      "model": "A 710 GC gri",
       "url": "https://www.n11.com/urun/arcelik-a-710-gc-6-programli-14-kisilik-bulasik-makinesi-121973665?magaza=erhangulener"
     },
     {
       "catalog_id": "96222402",
-      "model": "2072 MI",
       "seller": "haneciogluticaret",
-      "own_price_kurus": 3311540,
-      "rival_price_kurus": 2667908,
+      "own_price_kurus": 3275545,
+      "rival_price_kurus": 2638909,
+      "model": "2072 MI",
       "url": "https://www.n11.com/urun/arcelik-2072-mi-244-l-7-bolmeli-statik-dikey-derin-dondurucu-96222402?magaza=haneciogluticaret"
     },
     {
@@ -254,36 +270,67 @@
     },
     {
       "catalog_id": "126000051",
-      "model": "10121 (beyaz)",
       "seller": "avrupabeyazesya",
-      "own_price_kurus": 2667500,
-      "rival_price_kurus": 2667000,
+      "own_price_kurus": 2666900,
+      "rival_price_kurus": 2666500,
+      "model": "10121 beyaz",
       "url": "https://www.n11.com/urun/arcelik-10121-1200-devir-10-kg-camasir-makinesi-126000051?magaza=avrupabeyazesya"
     },
     {
       "catalog_id": "128799406",
-      "model": "570508 MB (beyaz)",
       "seller": "avrupabeyazesya",
-      "own_price_kurus": 3196900,
-      "rival_price_kurus": 3196000,
+      "own_price_kurus": 3182900,
+      "rival_price_kurus": 3182000,
+      "model": "570508 MB beyaz",
       "url": "https://www.n11.com/urun/arcelik-570508-mb-508-l-cift-kapili-no-frost-buzdolabi-128799406?magaza=avrupabeyazesya"
+    },
+    {
+      "catalog_id": "119184364",
+      "seller": "haneciogluticaret",
+      "own_price_kurus": 4419900,
+      "rival_price_kurus": 4372459,
+      "model": "270477 EI AI Inox",
+      "url": "https://www.n11.com/urun/arcelik-270477-ei-ai-475-l-yapay-zeka-teknolojili-alttan-donduruculu-cift-kapili-buzdolabi-119184364?magaza=haneciogluticaret"
+    },
+    {
+      "catalog_id": "134540814",
+      "seller": "erhangulener",
+      "own_price_kurus": 6240000,
+      "rival_price_kurus": 6225310,
+      "model": "283655 EI AI Inox",
+      "url": "https://www.n11.com/urun/arcelik-283655-ei-ai-fit-kombi-655-l-no-frost-buzdolabi-134540814?magaza=erhangulener"
+    },
+    {
+      "catalog_id": "137913583",
+      "seller": "avrupabeyazesya",
+      "own_price_kurus": 4458545,
+      "rival_price_kurus": 4388000,
+      "model": "570508 EI gri",
+      "url": "https://www.n11.com/urun/arcelik-570508-ei-cift-kapili-no-frost-buzdolabi-gri-137913583?magaza=avrupabeyazesya"
     }
   ],
   "last_check": {
-    "verified_from": "2026-10-15T08:10:48Z",
-    "verified_to": "2026-10-15T08:46:20Z",
+    "verified_from": "2026-10-15T11:15:54Z",
+    "verified_to": "2026-10-15T11:40:39Z",
     "scan": "complete_current_own_inventory",
-    "own_total": 41,
-    "own_links_found": 41,
-    "own_prices_read": 41,
-    "all_seller_panels_completed": 41,
-    "target_seller_catalog_checks": 123,
+    "own_total": 40,
+    "own_links_found": 40,
+    "own_prices_read": 40,
+    "all_seller_panels_completed": 40,
+    "target_seller_catalog_checks": 120,
     "target_offers_seen": 44,
-    "target_offers_below_own": 13,
-    "new_offers_delivered": 0,
-    "notification_candidates_in_checked_scope": 0,
+    "target_offers_below_own": 16,
+    "new_offers_delivered": 12,
+    "notification_candidates_in_checked_scope": 12,
     "reference_total": 41,
-    "reference_found": 41,
+    "reference_found": 40,
+    "reference_not_found": [
+      {
+        "model": "A 600 B",
+        "catalog_id": "119186548",
+        "reason": "not in current complete own store inventory; not assumed active"
+      }
+    ],
     "found_catalog_ids": [
       "59831910",
       "122330014",
@@ -295,7 +342,6 @@
       "84396164",
       "122021236",
       "75294073",
-      "119186548",
       "133470448",
       "84566973",
       "119185711",
@@ -338,7 +384,6 @@
       "84396164",
       "122021236",
       "75294073",
-      "119186548",
       "133470448",
       "84566973",
       "119185711",
@@ -381,7 +426,6 @@
       "84396164",
       "122021236",
       "75294073",
-      "119186548",
       "133470448",
       "84566973",
       "119185711",
@@ -416,43 +460,43 @@
     "target_catalog_ids_not_checked": [],
     "error": null,
     "access": {
-      "sasmazerltd": "Current store inventory41 links and41 screenshot prices read",
-      "avrupabeyazesya": "41 catalog panels fully scrolled;2 offers read",
-      "erhangulener": "41 catalog panels fully scrolled;25 offers read",
-      "haneciogluticaret": "41 catalog panels fully scrolled;17 offers read"
+      "sasmazerltd": "current store total40 and40 unique links and40 screenshot prices",
+      "avrupabeyazesya": "all40 catalog seller panels checked;4 offers read",
+      "erhangulener": "all40 catalog seller panels checked;24 offers read",
+      "haneciogluticaret": "all40 catalog seller panels checked;16 offers read"
     },
-    "note": "Fresh screenshots during the stated interval:41 own prices and all41 fully scrolled seller panels;123 target seller/catalog checks,44 offers(Avrupa2 Erhan25 Hanecioglu17).13 below-own offers match successful delivery baselines: no new lower or further reduced offer; outbox unchanged. Erhan10122 offer was absent in the fully scrolled current catalog panel; previous observation was not reused as a current offer.10121/10121S and A811 variants checked separately. Own total41 matches41 unique current catalog links and41 screenshot-read prices. Navigation/click timeouts recovered through normal page observation and interaction; no unresolved access error. Prices have individual observation times within this interval, not simultaneous end-time quotes. No Telegram report containing aged prices was sent. Prior delivery records preserved; unrelated rival inventory intentionally not scanned."
+    "note": "Fresh complete current inventory screenshot scan and fully scrolled all-seller panels. A600B absent from own current list, not assumed active.16 below-own offers:12 notification candidates(3 newly below-own offers,9 further reduced previously delivered offers);4 unchanged below-own not resent. All12 candidates' own and rival seller-specific pages re-read in screenshots from11:35 to11:40UTC before outbox at11:42UTC. Loading placeholders on902KMX own,270477EI Hanecioglu and2072MI own were not accepted: actual prices captured afterward. Same catalog/model/color/variant verified;10121 and10121S separate;BEU9030D Bakir-Siyah selected. Prior baselines preserved outside current scope. No N11 writes or account changes; unrelated rival inventory not scanned. Telegram workflow exact head commit and send step success verified."
   },
   "last_observed_offers": [
     {
       "catalog_id": "122330014",
       "seller": "haneciogluticaret",
-      "own_price_kurus": 2759540,
+      "own_price_kurus": 2729545,
       "rival_price_kurus": 2469900
     },
     {
       "catalog_id": "122330014",
       "seller": "erhangulener",
-      "own_price_kurus": 2759540,
-      "rival_price_kurus": 2521996
+      "own_price_kurus": 2729545,
+      "rival_price_kurus": 2494583
     },
     {
       "catalog_id": "125776510",
       "seller": "erhangulener",
-      "own_price_kurus": 3035540,
-      "rival_price_kurus": 2950256
+      "own_price_kurus": 3002545,
+      "rival_price_kurus": 2918188
     },
     {
       "catalog_id": "126000051",
       "seller": "avrupabeyazesya",
-      "own_price_kurus": 2667500,
-      "rival_price_kurus": 2667000
+      "own_price_kurus": 2666900,
+      "rival_price_kurus": 2666500
     },
     {
       "catalog_id": "126000051",
       "seller": "haneciogluticaret",
-      "own_price_kurus": 2667500,
-      "rival_price_kurus": 3173908
+      "own_price_kurus": 2666900,
+      "rival_price_kurus": 3139409
     },
     {
       "catalog_id": "122330277",
@@ -464,7 +508,7 @@
       "catalog_id": "122330277",
       "seller": "erhangulener",
       "own_price_kurus": 2304800,
-      "rival_price_kurus": 2333488
+      "rival_price_kurus": 2308124
     },
     {
       "catalog_id": "53229173",
@@ -475,32 +519,32 @@
     {
       "catalog_id": "128799406",
       "seller": "avrupabeyazesya",
-      "own_price_kurus": 3196900,
-      "rival_price_kurus": 3196000
+      "own_price_kurus": 3182900,
+      "rival_price_kurus": 3182000
     },
     {
       "catalog_id": "128799406",
       "seller": "erhangulener",
-      "own_price_kurus": 3196900,
-      "rival_price_kurus": 3521208
+      "own_price_kurus": 3182900,
+      "rival_price_kurus": 3482934
     },
     {
       "catalog_id": "84396164",
       "seller": "erhangulener",
-      "own_price_kurus": 5565540,
-      "rival_price_kurus": 5480900
+      "own_price_kurus": 5505045,
+      "rival_price_kurus": 5421325
     },
     {
       "catalog_id": "84396164",
       "seller": "haneciogluticaret",
-      "own_price_kurus": 5565540,
-      "rival_price_kurus": 6071908
+      "own_price_kurus": 5505045,
+      "rival_price_kurus": 6005909
     },
     {
       "catalog_id": "122021236",
       "seller": "haneciogluticaret",
-      "own_price_kurus": 3109140,
-      "rival_price_kurus": 3035908
+      "own_price_kurus": 3075345,
+      "rival_price_kurus": 3002909
     },
     {
       "catalog_id": "75294073",
@@ -512,25 +556,13 @@
       "catalog_id": "75294073",
       "seller": "haneciogluticaret",
       "own_price_kurus": 5169800,
-      "rival_price_kurus": 5887908
-    },
-    {
-      "catalog_id": "119186548",
-      "seller": "erhangulener",
-      "own_price_kurus": 2253540,
-      "rival_price_kurus": 2279116
-    },
-    {
-      "catalog_id": "119186548",
-      "seller": "haneciogluticaret",
-      "own_price_kurus": 2253540,
-      "rival_price_kurus": 2391908
+      "rival_price_kurus": 5823909
     },
     {
       "catalog_id": "133470448",
       "seller": "erhangulener",
-      "own_price_kurus": 2969500,
-      "rival_price_kurus": 3093040
+      "own_price_kurus": 2666900,
+      "rival_price_kurus": 3059420
     },
     {
       "catalog_id": "84566973",
@@ -542,7 +574,7 @@
       "catalog_id": "84566973",
       "seller": "haneciogluticaret",
       "own_price_kurus": 2659700,
-      "rival_price_kurus": 2943908
+      "rival_price_kurus": 2911909
     },
     {
       "catalog_id": "119185711",
@@ -560,25 +592,25 @@
       "catalog_id": "119184364",
       "seller": "haneciogluticaret",
       "own_price_kurus": 4419900,
-      "rival_price_kurus": 4420508
+      "rival_price_kurus": 4372459
     },
     {
       "catalog_id": "119184364",
       "seller": "erhangulener",
       "own_price_kurus": 4419900,
-      "rival_price_kurus": 4758516
+      "rival_price_kurus": 4706793
     },
     {
       "catalog_id": "76417732",
       "seller": "erhangulener",
-      "own_price_kurus": 3219540,
-      "rival_price_kurus": 3140604
+      "own_price_kurus": 3184545,
+      "rival_price_kurus": 3106467
     },
     {
       "catalog_id": "76417732",
       "seller": "haneciogluticaret",
-      "own_price_kurus": 3219540,
-      "rival_price_kurus": 3679908
+      "own_price_kurus": 3184545,
+      "rival_price_kurus": 3639909
     },
     {
       "catalog_id": "26716681",
@@ -590,31 +622,31 @@
       "catalog_id": "26716681",
       "seller": "haneciogluticaret",
       "own_price_kurus": 4829800,
-      "rival_price_kurus": 5243908
+      "rival_price_kurus": 5186909
     },
     {
       "catalog_id": "129273228",
       "seller": "erhangulener",
       "own_price_kurus": 3521400,
-      "rival_price_kurus": 3650100
+      "rival_price_kurus": 3610425
     },
     {
       "catalog_id": "57187573",
       "seller": "erhangulener",
       "own_price_kurus": 3659900,
-      "rival_price_kurus": 3744860
+      "rival_price_kurus": 3704155
     },
     {
       "catalog_id": "57187573",
       "seller": "haneciogluticaret",
       "own_price_kurus": 3659900,
-      "rival_price_kurus": 3955908
+      "rival_price_kurus": 3912909
     },
     {
       "catalog_id": "121973553",
       "seller": "erhangulener",
-      "own_price_kurus": 2903060,
-      "rival_price_kurus": 2950256
+      "own_price_kurus": 2871505,
+      "rival_price_kurus": 2918188
     },
     {
       "catalog_id": "131264934",
@@ -625,8 +657,8 @@
     {
       "catalog_id": "96222402",
       "seller": "haneciogluticaret",
-      "own_price_kurus": 3311540,
-      "rival_price_kurus": 2667908
+      "own_price_kurus": 3275545,
+      "rival_price_kurus": 2638909
     },
     {
       "catalog_id": "42888640",
@@ -638,25 +670,25 @@
       "catalog_id": "42888640",
       "seller": "haneciogluticaret",
       "own_price_kurus": 5038992,
-      "rival_price_kurus": 5703908
+      "rival_price_kurus": 5641909
     },
     {
       "catalog_id": "59013959",
       "seller": "haneciogluticaret",
-      "own_price_kurus": 6071540,
-      "rival_price_kurus": 6347908
+      "own_price_kurus": 6005545,
+      "rival_price_kurus": 6278909
     },
     {
       "catalog_id": "134540814",
       "seller": "erhangulener",
       "own_price_kurus": 6240000,
-      "rival_price_kurus": 6293720
+      "rival_price_kurus": 6225310
     },
     {
       "catalog_id": "121973665",
       "seller": "erhangulener",
-      "own_price_kurus": 2906740,
-      "rival_price_kurus": 2720028
+      "own_price_kurus": 2875145,
+      "rival_price_kurus": 2690462
     },
     {
       "catalog_id": "60851107",
@@ -671,16 +703,28 @@
       "rival_price_kurus": 4579900
     },
     {
+      "catalog_id": "137913583",
+      "seller": "avrupabeyazesya",
+      "own_price_kurus": 4458545,
+      "rival_price_kurus": 4388000
+    },
+    {
       "catalog_id": "137300051",
       "seller": "erhangulener",
-      "own_price_kurus": 5915140,
-      "rival_price_kurus": 5932988
+      "own_price_kurus": 5850845,
+      "rival_price_kurus": 5868499
+    },
+    {
+      "catalog_id": "137300051",
+      "seller": "avrupabeyazesya",
+      "own_price_kurus": 5850845,
+      "rival_price_kurus": 6098500
     },
     {
       "catalog_id": "122232596",
       "seller": "erhangulener",
-      "own_price_kurus": 9171020,
-      "rival_price_kurus": 9288780
+      "own_price_kurus": 9071335,
+      "rival_price_kurus": 9187815
     },
     {
       "catalog_id": "59214068",
@@ -696,15 +740,15 @@
     },
     {
       "catalog_id": "122330014",
-      "price_kurus": 2759540
+      "price_kurus": 2729545
     },
     {
       "catalog_id": "125776510",
-      "price_kurus": 3035540
+      "price_kurus": 3002545
     },
     {
       "catalog_id": "126000051",
-      "price_kurus": 2667500
+      "price_kurus": 2666900
     },
     {
       "catalog_id": "122330277",
@@ -716,27 +760,23 @@
     },
     {
       "catalog_id": "128799406",
-      "price_kurus": 3196900
+      "price_kurus": 3182900
     },
     {
       "catalog_id": "84396164",
-      "price_kurus": 5565540
+      "price_kurus": 5505045
     },
     {
       "catalog_id": "122021236",
-      "price_kurus": 3109140
+      "price_kurus": 3075345
     },
     {
       "catalog_id": "75294073",
       "price_kurus": 5169800
     },
     {
-      "catalog_id": "119186548",
-      "price_kurus": 2253540
-    },
-    {
       "catalog_id": "133470448",
-      "price_kurus": 2969500
+      "price_kurus": 2666900
     },
     {
       "catalog_id": "84566973",
@@ -764,7 +804,7 @@
     },
     {
       "catalog_id": "76417732",
-      "price_kurus": 3219540
+      "price_kurus": 3184545
     },
     {
       "catalog_id": "26716681",
@@ -784,11 +824,11 @@
     },
     {
       "catalog_id": "121973553",
-      "price_kurus": 2903060
+      "price_kurus": 2871505
     },
     {
       "catalog_id": "120214369",
-      "price_kurus": 4875540
+      "price_kurus": 4822545
     },
     {
       "catalog_id": "131264934",
@@ -796,11 +836,11 @@
     },
     {
       "catalog_id": "96222402",
-      "price_kurus": 3311540
+      "price_kurus": 3275545
     },
     {
       "catalog_id": "120389669",
-      "price_kurus": 5381540
+      "price_kurus": 5323045
     },
     {
       "catalog_id": "42888640",
@@ -808,7 +848,7 @@
     },
     {
       "catalog_id": "59013959",
-      "price_kurus": 6071540
+      "price_kurus": 6005545
     },
     {
       "catalog_id": "134540814",
@@ -816,11 +856,11 @@
     },
     {
       "catalog_id": "121973665",
-      "price_kurus": 2906740
+      "price_kurus": 2875145
     },
     {
       "catalog_id": "131735088",
-      "price_kurus": 4139540
+      "price_kurus": 4094545
     },
     {
       "catalog_id": "60851107",
@@ -828,11 +868,11 @@
     },
     {
       "catalog_id": "137913583",
-      "price_kurus": 4507540
+      "price_kurus": 4458545
     },
     {
       "catalog_id": "55697247",
-      "price_kurus": 8353140
+      "price_kurus": 8262345
     },
     {
       "catalog_id": "93286085",
@@ -840,11 +880,11 @@
     },
     {
       "catalog_id": "137300051",
-      "price_kurus": 5915140
+      "price_kurus": 5850845
     },
     {
       "catalog_id": "122232596",
-      "price_kurus": 9171020
+      "price_kurus": 9071335
     },
     {
       "catalog_id": "59214068",
@@ -866,6 +906,6 @@
     "resolved_at": "2026-10-15T04:31:11Z",
     "status": "resolved_current_full_scan"
   },
-  "last_observed_verified_from": "2026-10-15T08:10:48Z",
-  "last_observed_verified_to": "2026-10-15T08:46:20Z"
+  "last_observed_verified_from": "2026-10-15T11:15:54Z",
+  "last_observed_verified_to": "2026-10-15T11:40:39Z"
 }
