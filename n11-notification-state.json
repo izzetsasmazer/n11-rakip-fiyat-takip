@@ -888,5 +888,19 @@
   "last_observed_verified_from": "2026-10-15T13:00:00Z",
   "last_observed_verified_to": "2026-10-15T13:18:17Z",
   "last_observed_own_verified_from": "2026-10-15T16:46:00Z",
-  "last_observed_own_verified_to": "2026-10-15T16:47:30Z"
+  "last_observed_own_verified_to": "2026-10-15T16:47:30Z",
+  "last_repair_smoke_test": {
+    "tested_at": "2026-10-15T17:02:41.636Z",
+    "automation_prompt_update_verified": true,
+    "inventory_prices_read": 40,
+    "target_catalogs_tested": 1,
+    "target_catalogs_total": 40,
+    "test_catalog_id": "122330014",
+    "panel_opened": true,
+    "panel_end_observed": true,
+    "panel_seller_count": 17,
+    "full_target_scan_completed": false,
+    "telegram_sent": false,
+    "note": "Only a limited browser recovery smoke test. No last_check, price observations, last_report, or last_delivered_offers changed. Separate short screenshot calls allowed panel reading despite persistent tool telemetry errors. Remaining39 catalogs have no new target verification from this test."
+  }
 }
