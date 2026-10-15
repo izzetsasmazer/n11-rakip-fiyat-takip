@@ -121,20 +121,19 @@
     }
   ],
   "last_check": {
-    "verified_from": "2026-10-14T23:31:31Z",
-    "verified_to": "2026-10-14T23:46:49Z",
-    "scan": "complete_current_own_inventory",
+    "verified_from": "2026-10-15T01:07:54Z",
+    "verified_to": "2026-10-15T01:31:19Z",
+    "scan": "partial_target_catalog_scan",
     "own_total": 41,
     "own_links_found": 41,
     "own_prices_read": 41,
-    "all_seller_panels_completed": 41,
-    "target_seller_catalog_checks": 123,
-    "target_offers_seen": 45,
+    "all_seller_panels_completed": 31,
+    "target_seller_catalog_checks": 93,
+    "target_offers_seen": 38,
     "new_offers_delivered": 0,
-    "notification_candidates": 0,
+    "notification_candidates_in_checked_scope": 0,
     "reference_total": 41,
     "reference_found": 41,
-    "reference_not_in_current_store": [],
     "found_catalog_ids": [
       "59831910",
       "122330014",
@@ -221,7 +220,53 @@
       "55697247",
       "93286085"
     ],
-    "note": "Fresh screenshot scan; own store lists 41 products including 10122. All catalog seller panels scrolled to stable end; 45 target offers read from screenshots. 11 currently lower offers unchanged against successful delivered baseline; no outbox update or Telegram message. Own 10121 now 26675 TL, Europe 26680 TL is no longer below. Scan is a time window, not a simultaneous snapshot."
+    "target_catalog_ids_completed": [
+      "59831910",
+      "122330014",
+      "125776510",
+      "126000051",
+      "122330277",
+      "53229173",
+      "128799406",
+      "122021236",
+      "75294073",
+      "84396164",
+      "119186548",
+      "133470448",
+      "84566973",
+      "119184364",
+      "119185711",
+      "1774636",
+      "130629685",
+      "131629946",
+      "76417732",
+      "26716681",
+      "129273228",
+      "57187573",
+      "121973553",
+      "120214369",
+      "131264934",
+      "96222402",
+      "131735088",
+      "120389669",
+      "124593855",
+      "42888640",
+      "59013959"
+    ],
+    "target_catalog_ids_not_checked": [
+      "134540814",
+      "121973665",
+      "60851107",
+      "137913583",
+      "137300051",
+      "122232596",
+      "59214068",
+      "1378916",
+      "55697247",
+      "93286085"
+    ],
+    "error": "502 Bad Gateway; [Errno 111] Connection refused remained after one reload on catalog 134540814; earlier navigation and screenshot timeouts recovered. No bot/security denial evidence. Transient connection failure; recurring task left enabled.",
+    "note": "All own prices read from fresh screenshots. 38 target offers read across 31 complete seller panels, no new lower or further-reduced delivered offers in checked scope. Remaining ten catalog target offers not verified. Historical notification baseline and prior observations retained, not counted as current data. No outbox update or Telegram message."
   },
   "last_observed_offers": [
     {
@@ -660,5 +705,14 @@
       "catalog_id": "93286085",
       "price_kurus": 7267500
     }
-  ]
+  ],
+  "last_access_issue": {
+    "code": "502_connection_refused",
+    "first_seen_at": "2026-10-15T01:31:19Z",
+    "last_seen_at": "2026-10-15T01:31:19Z",
+    "reported_via": "chatgpt",
+    "reported_at": "2026-10-15T01:31:19Z",
+    "scope": "10 target catalog panels not checked",
+    "transient": true
+  }
 }
