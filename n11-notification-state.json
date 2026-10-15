@@ -883,15 +883,14 @@
     }
   ],
   "last_access_issue": {
-    "code": "502_connection_refused",
-    "first_seen_at": "2026-10-15T01:31:19Z",
-    "last_seen_at": "2026-10-15T01:31:19Z",
+    "code": "browser_tool_output_overflow",
+    "first_seen_at": "2026-10-15T16:27:00Z",
+    "last_seen_at": "2026-10-15T16:43:20Z",
     "reported_via": "chatgpt",
-    "reported_at": "2026-10-15T01:31:19Z",
-    "scope": "10 target catalog panels not checked",
+    "reported_at": "2026-10-15T16:33:00Z",
     "transient": true,
-    "resolved_at": "2026-10-15T04:31:11Z",
-    "status": "resolved_current_full_scan"
+    "status": "retry_failed",
+    "reason": "N11 store opens and shows40 products; repeated browser runtime telemetry errors flood output, including after runtime reset. No fresh full rival scan or no-change conclusion."
   },
   "last_observed_verified_from": "2026-10-15T13:00:00Z",
   "last_observed_verified_to": "2026-10-15T13:18:17Z"
