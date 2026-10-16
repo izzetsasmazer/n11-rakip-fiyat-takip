@@ -1,7 +1,5 @@
 name: N11 bagimsiz fiyat kontrolu
 on:
-  schedule:
-    - cron: '*/15 * * * *'
   workflow_dispatch:
   push:
     branches: [main]
@@ -33,6 +31,14 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           BATCH_SIZE: '8'
         run: python n11_watcher.py
+      - name: Upload diagnostic screenshot
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: n11-diagnostic
+          path: n11-debug/
+          if-no-files-found: ignore
+          retention-days: 2
       - name: Store independent scan progress
         if: always()
         run: |
