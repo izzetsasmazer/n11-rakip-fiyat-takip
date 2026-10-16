@@ -1,0 +1,41 @@
+name: N11 bagimsiz fiyat kontrolu
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: n11-bagimsiz-takip
+  cancel-in-progress: false
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+      - name: Scan visible N11 offers
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          BATCH_SIZE: '8'
+        run: python n11_watcher.py
+      - name: Store independent scan progress
+        if: always()
+        run: |
+          if [ -f n11-independent-state.json ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add n11-independent-state.json
+            if ! git diff --cached --quiet; then
+              git commit -m "Save independent N11 scan progress [skip ci]"
+              git push
+            fi
+          fi
