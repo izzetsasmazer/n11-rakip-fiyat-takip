@@ -36,7 +36,13 @@ def goto(page,url):
         return False
 def listing(page):
     """Read catalog URLs from the user's publicly visible store, including lazy loading."""
-    if not goto(page,BASE+"/magaza/"+OWN): return []
+    if not goto(page,BASE+"/magaza/"+OWN):
+        print("LISTING_FAILED_NAVIGATION",page.url)
+        Path("n11-debug").mkdir(exist_ok=True)
+        page.screenshot(path="n11-debug/store.png",full_page=False)
+        Path("n11-debug/status.txt").write_text("Navigation failed; URL: "+page.url)
+        return []
+    print("LISTING_URL",page.url,"TITLE",page.title())
     found={}
     stagnant=0
     for _ in range(90):
@@ -53,6 +59,14 @@ def listing(page):
         if stagnant>=7:
             break
     print("OWN_CATALOG_IDS",len(found))
+    if not found:
+        Path("n11-debug").mkdir(exist_ok=True)
+        page.screenshot(path="n11-debug/store.png",full_page=False)
+        Path("n11-debug/status.txt").write_text(
+            "No catalog links. URL: "+page.url+" TITLE: "+page.title()+
+            " BODY_START: "+page.locator("body").inner_text(timeout=5000)[:600],
+            encoding="utf-8")
+        print("LISTING_EMPTY_DEBUG_FILE_CREATED")
     return list(found.items())
 def offered(page,url,seller):
     """Requires verified seller and single unambiguous price in purchase area."""
