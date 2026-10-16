@@ -4,6 +4,9 @@ from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlparse, parse_qs, urlencode, urlunparse
 from playwright.sync_api import sync_playwright
+from io import BytesIO
+from PIL import Image, ImageEnhance, ImageOps
+import pytesseract
 
 BASE="https://www.n11.com"
 OWN="sasmazerltd"
@@ -76,12 +79,38 @@ def offered(page,url,seller):
     if not outcome["sellerVisible"]:
         print("UNVERIFIED_SELLER",seller,url)
         return None
-    # Only accept exactly one distinct currency value across price-labeled nodes.
-    values=set(filter(lambda x:x is not None,(cash(x) for x in outcome["prices"])))
-    if len(values)!=1:
-        print("AMBIGUOUS_PRICE",seller,url,"candidates",len(values))
+    # Read PIXELS, not DOM price text. The DOM is used only to locate visual regions.
+    # Ambiguous, missing or mixed list/sale prices are deliberately rejected.
+    selectors='[class*="price"],[class*="Price"],[data-testid*="price"]'
+    observed=set()
+    try:
+        nodes=page.locator(selectors)
+        for i in range(min(nodes.count(),35)):
+            node=nodes.nth(i)
+            try:
+                if not node.is_visible(): continue
+                bb=node.bounding_box()
+                if not bb or bb["width"]<35 or bb["height"]<10 or bb["width"]>650 or bb["height"]>180:
+                    continue
+                raw=node.screenshot(timeout=3000)
+                img=Image.open(BytesIO(raw)).convert("RGB")
+                img=ImageOps.autocontrast(img)
+                img=ImageEnhance.Contrast(img).enhance(2)
+                img=img.resize((img.width*3,img.height*3))
+                for config in ("--psm 6","--psm 7"):
+                    value=cash(pytesseract.image_to_string(img,config=config,lang="eng"))
+                    if value and 10000<=value<=500000000:
+                        observed.add(value)
+            except Exception:
+                continue
+    except Exception as exc:
+        print("OCR_ERROR",type(exc).__name__)
         return None
-    return {"cents":next(iter(values)),"title":outcome["title"],"url":target}
+    if len(observed)!=1:
+        print("OCR_AMBIGUOUS",seller,url,"distinct_prices",len(observed))
+        return None
+    return {"cents":next(iter(observed)),"title":outcome["title"],"url":target}
+
 def notify(message):
     token=os.getenv("TELEGRAM_BOT_TOKEN")
     chat=os.getenv("TELEGRAM_CHAT_ID")
